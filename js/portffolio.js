@@ -40,4 +40,13 @@ function filterSelection(c) {
       }
     }
   }
+
+  // Retirer la classe "active" de tous les boutons
+  var btns = document.getElementsByClassName("btn");
+  for (i = 0; i < btns.length; i++) {
+    btns[i].classList.remove("active");
+  }
+
+  // Ajouter la classe "active" uniquement au bouton cliqué
+  event.currentTarget.classList.add("active");
 }

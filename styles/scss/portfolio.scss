@@ -189,3 +189,36 @@
     width: 100%;
   }
 }
+
+/* Dark Mode */
+.dark-mode .portfolio {
+  background-color: $dark;
+
+  h2 {
+    color: $primary;
+  }
+}
+
+.dark-mode .portfolio-header {
+  background-color: $secondary;
+  border: solid 1px$darkmedium;
+}
+
+.dark-mode .btn {
+  background-color: $superdark;
+  color: $darkextralight;
+}
+
+.dark-mode .btn:hover {
+  background-color: teal;
+  color: $superlight;
+}
+
+.btn.active {
+  background-color: $secondary;
+  color: $superlight;
+}
+.dark-mode .btn.active {
+  background-color: $primary;
+  color: $secondary;
+}

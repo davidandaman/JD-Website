@@ -565,6 +565,39 @@ input:checked + .slider:before {
     width: 100%;
   }
 }
+/* Dark Mode */
+.dark-mode .portfolio {
+  background-color: #213740;
+}
+.dark-mode .portfolio h2 {
+  color: #ffde01;
+}
+
+.dark-mode .portfolio-header {
+  background-color: #1b292e;
+  border: solid 1px #2d4349;
+}
+
+.dark-mode .btn {
+  background-color: #0d1416;
+  color: #637074;
+}
+
+.dark-mode .btn:hover {
+  background-color: teal;
+  color: #fefdf5;
+}
+
+.btn.active {
+  background-color: #1b292e;
+  color: #fefdf5;
+}
+
+.dark-mode .btn.active {
+  background-color: #ffde01;
+  color: #1b292e;
+}
+
 :root {
   --primary: #ffde01;
   --dark: #213740;
