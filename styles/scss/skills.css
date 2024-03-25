@@ -1,0 +1,278 @@
+@charset "UTF-8";
+:root {
+  --primary: #ffde01;
+  --dark: #213740;
+  --secondary: #1b292e;
+  --darkmedium: #2d4349;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* SKILLS Je travaille avec */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 580px;
+  background-color: #ffde01;
+  padding-top: 40px;
+}
+.skills-section h2 {
+  display: inline-block;
+  width: 1140px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.3em;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.skills-section .skills-tab {
+  display: flex;
+  flex-direction: column;
+  width: 1140px;
+  height: 404px;
+  background-color: #fefdf5;
+  border: solid 1px #2d4349;
+  padding: 30px;
+}
+.skills-section .skills-row-A {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.skills-section .skills-row-B {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.skills-section .flip-box {
+  background-color: transparent;
+  width: 155px;
+  height: 155px;
+  perspective: 1000px;
+}
+.skills-section .flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.skills-section .flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+.skills-section .flip-box-front,
+.skills-section .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.skills-section .flip-box-front {
+  background-color: #1b292e;
+  color: black;
+  cursor: pointer;
+}
+.skills-section .flip-box-back {
+  background-color: #213740;
+  color: #fefdf5;
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+.skills-section .flip-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 25px;
+}
+.skills-section .flip-content h3 {
+  color: #fefdf5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  margin-top: 10px;
+}
+.skills-section .flip-content p {
+  padding: 10px;
+  font-size: 0.8em;
+  margin-top: -10px;
+}
+
+/* Styles pour les barres de compétences */
+.skill-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #fefdf5;
+}
+.skill-bar h3 {
+  color: #1b292e;
+  font-size: 1em;
+}
+.skill-bar h3 span {
+  color: #fefdf5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.dark-mode .skill-bar {
+  background-color: #1b292e;
+}
+
+.dark-mode .skill-bar h3 {
+  color: #fefdf5 !important;
+  font-size: 1em;
+}
+.dark-mode .skill-bar h3 span {
+  color: #fefdf5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.wrap {
+  max-width: 70%;
+}
+
+/* Styles pour les barres de compétences */
+.bar {
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Styles pour les barres de progression */
+.bar .thumb {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 18px;
+  background-color: #f4f1de;
+  border: solid 1px #e7e4d1;
+  border-radius: 2px;
+  margin-top: 10px;
+}
+
+.dark-mode .bar .thumb {
+  background-color: #1e3239;
+  border: solid 1px #2d4349;
+}
+
+.dark-mode .bar .thumb span {
+  background: #ffde01;
+  border: solid 1px #2d4349;
+}
+
+/* Styles pour les éléments de remplissage des barres */
+.bar .thumb span {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 2px;
+  background: #ffde01;
+  border: solid 1px #e7e4d1;
+}
+
+.bar:nth-child(1) span {
+  width: 90%;
+}
+
+.bar:nth-child(2) span {
+  width: 85%;
+}
+
+.bar:nth-child(3) span {
+  width: 60%;
+}
+
+.bar:nth-child(4) span {
+  width: 80%;
+}
+
+.bar:nth-child(5) span {
+  width: 90%;
+}
+
+.bar:nth-child(6) span {
+  width: 70%;
+}
+
+.bar:nth-child(7) span {
+  width: 85%;
+}
+
+.bar:nth-child(8) span {
+  width: 90%;
+}
+
+/* Styles pour les abbr */
+.bar abbr {
+  width: 40px;
+  display: inline-block;
+  height: 28px;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  top: 30px;
+  margin-left: -5px;
+  z-index: 1;
+  background: #1b292e;
+  font-size: 0.7em;
+  line-height: 2.3em;
+  border: solid 1px #637074;
+}
+
+/* Définissez la position des éléments abbr en fonction de leur pourcentage */
+.bar:nth-child(1) abbr {
+  left: 90%;
+}
+
+.bar:nth-child(2) abbr {
+  left: 85%;
+}
+
+.bar:nth-child(3) abbr {
+  left: 60%;
+}
+
+.bar:nth-child(4) abbr {
+  left: 80%;
+}
+
+.bar:nth-child(5) abbr {
+  left: 90%;
+}
+
+.bar:nth-child(6) abbr {
+  left: 70%;
+}
+
+.bar:nth-child(7) abbr {
+  left: 85%;
+}
+
+.bar:nth-child(8) abbr {
+  left: 90%;
+}
+
+/*# sourceMappingURL=skills.css.map */

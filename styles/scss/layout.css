@@ -1,0 +1,349 @@
+:root {
+  --primary: #ffde01;
+  --dark: #213740;
+  --secondary: #1b292e;
+  --darkmedium: #2d4349;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #1b292e;
+}
+
+/* HEADER */
+.header {
+  background-color: #ffde01;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  text-align: center;
+  /* LOGO */
+  /* MENU */
+}
+.header #triangle-langue {
+  display: block;
+  position: fixed;
+  right: -40px;
+  top: -40px;
+  background-color: #1b292e;
+  width: 80px;
+  height: 80px;
+  padding-top: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  transform: rotate(45deg);
+  z-index: 999;
+}
+.header .langue {
+  display: block;
+  width: 30px;
+  height: 20px;
+  padding-left: 20px;
+  padding-top: 4px;
+  -ms-transform: rotate(-45deg); /* Internet Explorer */
+  -moz-transform: rotate(-45deg); /* Firefox */
+  -webkit-transform: rotate(-45deg); /* Safari et Chrome */
+  -o-transform: rotate(-45deg); /* Opera */
+}
+.header .langue a:link,
+.header .langue a:active,
+.header .langue a:visited {
+  color: #ffde01;
+  text-decoration: none;
+  font-size: 16px;
+}
+.header .langue a:hover {
+  text-shadow: 0 0 5px #fbe864;
+}
+.header .top-header {
+  display: flex;
+  align-items: flex-end;
+  width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 150px;
+}
+.header .logotext {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 300px;
+  height: 150px;
+}
+.header .logo {
+  width: 104px;
+  height: 71px;
+}
+.header .logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.header .txt-logo {
+  height: 30px;
+  padding-left: 5px;
+  color: #1b292e;
+}
+.header .txt-logo .name {
+  font-family: "Comfortaa", sans-serif;
+  font-size: 20px;
+  padding-top: 9px;
+}
+.header .txt-logo .surname {
+  font-size: 24px;
+  font-weight: 500;
+}
+.header .navigation {
+  display: flex;
+  height: 86px;
+}
+.dark-mode .header .navigation {
+  background-color: #1b292e;
+}
+.dark-mode .header .navigation .menu li a {
+  color: #fefdf5;
+}
+.dark-mode .header .navigation .menu li a::before {
+  background-color: #ffde01;
+}
+.dark-mode .header .navigation .menu li a::after {
+  color: #1b292e;
+}
+.header .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.header .menu li {
+  display: inline-block;
+  margin: 0 30px;
+  position: relative;
+}
+.header .menu li a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+.header .menu li a::before {
+  content: "";
+  position: absolute;
+  bottom: -62px;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 62px;
+  background-color: #1b292e;
+  transition: transform 0.3s ease-in-out, height 0.3s;
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+.header .menu li a::after {
+  content: "\e876";
+  font-family: "Material Symbols Outlined", sans-serif;
+  font-size: 24px;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffde01;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.header .menu li:hover a::before {
+  height: 62px;
+  transform: scaleY(1);
+  bottom: 0;
+}
+.header .menu li:hover a::after {
+  opacity: 1;
+}
+
+/* SWITCHER DARK LIGHT */
+.bottom-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  padding-right: 100px;
+  height: 30px;
+  width: 100%;
+  background-color: #1b292e;
+  color: beige;
+}
+.dark-mode .bottom-header {
+  background-color: #ffde01;
+}
+
+/* CONTENT */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fefdf5;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+}
+.intro .photo-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 520px;
+}
+.intro .photo-intro img {
+  max-width: 64%;
+  height: auto;
+}
+.intro .txt-intro {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  padding: 20px 80px 40px 80px;
+  font-size: 14px;
+  text-align: justify;
+}
+.intro .txt-intro h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.7em;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #ffde01;
+  margin-bottom: 10px;
+}
+.intro .txt-intro p {
+  border-bottom: 3px solid #ffde01;
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+/* FOOTER */
+.footer {
+  height: 100px;
+  background-color: lightblue;
+}
+
+/* Switch Dark-Light */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 47px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #394d53;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #637074;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2d4349;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #394d53;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* HEADER DARK */
+/* Styles pour le mode sombre */
+.dark-mode {
+  background-color: #1b292e;
+  color: #ffde01;
+  /* Styles pour la balise main en mode sombre */
+  /* Styles pour la balise h1 dans .intro en mode sombre */
+}
+.dark-mode .header {
+  background-color: #1b292e;
+}
+.dark-mode .header .txt-logo {
+  color: #ffde01;
+  padding-left: 0px;
+}
+.dark-mode .header .logo img {
+  content: url("/../images/JD_logo_yellow.png");
+  padding-top: 10px;
+}
+.dark-mode #triangle-langue {
+  background-color: #ffde01;
+}
+.dark-mode .langue a:link,
+.dark-mode .langue a:active,
+.dark-mode .langue a:visited {
+  color: #1b292e;
+}
+.dark-mode .langue a:hover {
+  text-shadow: 0 0 5px #fefdf5;
+}
+.dark-mode .main {
+  background-color: #1b292e;
+}
+.dark-mode p {
+  color: #fefdf5;
+}
+.dark-mode .intro .txt-intro h1 {
+  color: #ffde01;
+}
+
+/*# sourceMappingURL=layout.css.map */

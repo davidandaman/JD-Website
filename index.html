@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JULIEN David - Créateur et Développeur Frontend</title>
+
+    <meta
+      name="description"
+      content="David JULIEN création de projets web, dévellopement Frontend"
+    />
+    <link rel="stylesheet" href="./styles/scss/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- Fichiers JS-->
+    <script src="/js/dark-light.js"></script>
+    <script src="/js/skills-bar.js"></script>
+    <script src="/js/portffolio.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div class="header dark-mode-header">
+      <div id="triangle-langue">
+        <div class="langue"><a href="#">en</a></div>
+      </div>
+      <div class="top-header">
+        <div class="logotext">
+          <div class="logo">
+            <img src="../images/JD_logo_black.png" alt="Jd - Développeur web" />
+          </div>
+          <div class="txt-logo">
+            <span class="name">David</span> <span class="surname">JULIEN</span>
+          </div>
+        </div>
+        <div class="navigation dark-mode-navigation">
+          <ul class="menu">
+            <li><a href="#">Compétences</a></li>
+            <li><a href="#">Pédagogie</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contactez-moi</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-header">
+      <label class="switch">
+        <input type="checkbox" onclick="darkLight()" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="main">
+      <section class="intro">
+        <div class="photo-intro">
+          <img src="../images/photo_jd.png" alt="Julien David" />
+        </div>
+        <div class="txt-intro">
+          <h1>Designer-Développeur front-end</h1>
+          <p>
+            Freelance spécialisé dans la création de sites internet, je vous
+            propose des solutions sur mesure pour répondre à vos besoins en
+            ligne. Avec mon expertise, je crée des sites esthétiques, intuitifs
+            et optimisés pour les moteurs de recherche. Mon approche
+            personnalisée garantit que chaque projet est unique et aligné avec
+            vos objectifs. Je m'engage à comprendre votre identité de marque
+            pour créer une présence en ligne qui vous représente véritablement.
+            En plus de la conception et du développement de sites web, je
+            propose des services de référencement (SEO) pour augmenter votre
+            visibilité en ligne. Parcourez mon portfolio pour découvrir mes
+            projets précédents et contactez-moi pour discuter de votre projet.
+            Ensemble, nous pouvons créer un site internet exceptionnel qui vous
+            démarquera de la concurrence.
+          </p>
+        </div>
+      </section>
+    </div>
+    <section class="skills-section">
+      <h2>Je travaille avec...</h2>
+      <div class="skills-tab">
+        <div class="skills-row-A">
+          <!-- skill 1 HTML-->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/html.png" alt="html" />
+                  <h3>HTML</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>La base pour faire de jolis sites vitrines</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 2 CSS -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/css.png" alt="css" />
+                  <h3>CSS</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>Éléments visuels avancés pour votre site web</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 3 DRUPAL -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/drupal.png" alt="CMS DRUPAL" />
+                  <h3>DRUPAL</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>
+                    Gestion de contenu flexible pour votre site professionnel
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 4 JS -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/js.png" alt="JavaScript" />
+                  <h3>JAVASCRIPT</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>
+                    Des sites web interactifs et dynamiques pour captiver votre
+                    audience
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 5 REACT -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/react.png" alt="React JS" />
+                  <h3>REACT</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>
+                    des applications web modernes et performantes pour une
+                    expérience utilisateur exceptionnelle
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 6 REDUX -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/redux.png" alt="Redux" />
+                  <h3>REDUX ToolKit</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>
+                    Gestion efficace de l'état de votre application web pour une
+                    expérience utilisateur fluide et cohérente
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skills-row-B">
+          <!-- skill 7 FIGMA -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/figma.png" alt="Figma" />
+                  <h3>FIGMA</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>Conception intuitive d'interfaces web dynamiques</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 8 PHOTOSHOP -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/photoshop.png" alt="Adobe photoshop" />
+                  <h3>PHOTOSHOP</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>Création visuelle experte pour le web et le graphisme</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 9 ILLUSTRATOR -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img
+                    src="../images/illustrator.png"
+                    alt="Adobe illustrator"
+                  />
+                  <h3>ILLUSTRATOR</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>
+                    Illustrations professionnelles pour des designs impeccables
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 10 POSTMAN -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/postman.png" alt="Postman" />
+                  <h3>POSTMAN</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>Tests API simplifiés pour un développement efficace</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 11 SWAGGER -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/swagger.png" alt="Documenter une API" />
+                  <h3>SWAGGER</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>
+                    Documentation API claire et intuitive pour une meilleure
+                    compréhension
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- skill 12 LIGHTHOUSE -->
+          <div class="flip-box">
+            <div class="flip-box-inner">
+              <div class="flip-box-front">
+                <div class="flip-content">
+                  <img src="../images/lighthouse.png" alt="Google lighthouse" />
+                  <h3>LIGHTHOUSE</h3>
+                </div>
+              </div>
+              <div class="flip-box-back">
+                <div class="flip-content">
+                  <p>
+                    Analyse approfondie des performances pour une expérience
+                    utilisateur optimisée
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SKILLS BAR -->
+    <section class="skills-bar">
+      <section class="skill-bar">
+        <div class="wrap">
+
+          <div class="bar">
+            <h3>
+              HTML5<abbr><span>90%</span></abbr>
+            </h3>
+            <div class="thumb"><span></span></div>
+          </div>
+
+
+          <div class="bar">
+            <h3>
+              CSS3<abbr><span>85%</span></abbr>
+            </h3>
+            <div class="thumb"><span></span></div>
+          </div>
+
+
+          <div class="bar">
+            <h3>
+              JAVASCRIPT<abbr><span>60%</span></abbr>
+            </h3>
+            <div class="thumb"><span></span></div>
+          </div>
+
+
+          <div class="bar">
+            <h3>
+              REACT<abbr><span>80%</span></abbr>
+            </h3>
+            <div class="thumb"><span></span></div>
+          </div>
+
+            <div class="bar">
+              <h3>
+                DRUPAL<abbr><span>90%</span></abbr>
+              </h3>
+              <div class="thumb"><span></span></div>
+            </div>
+
+              <div class="bar">
+                <h3>
+                  FIGMA<abbr><span>70%</span></abbr>
+                </h3>
+                <div class="thumb"><span></span></div>
+              </div>
+  
+              <div class="bar">
+                <h3>
+                  ADOBE PHOTOSHOP<abbr><span>85%</span></abbr>
+                </h3>
+                <div class="thumb"><span></span></div>
+              </div>
+
+              <div class="bar">
+                <h3>
+                  ADOBE ILLUSTRATOR<abbr><span>90%</span></abbr>
+                </h3>
+                <div class="thumb"><span></span></div>
+              </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+        <!-- SKILLS BAR -->
+    <section class="portfolio">
+      <h2>mon portfolio</h2>
+      <div class="portfolio-header">
+
+          <div class="portfolio-container">
+       
+      
+          </div>
+      
+          <!-- Filter Buttons -->
+          <div class="btn-container">
+            <button class="btn active" onclick="filterSelection('all')">tous</button>
+            <button class="btn" onclick="filterSelection('nature')">web</button>
+            <button class="btn" onclick="filterSelection('cars')">design</button>
+            <button class="btn" onclick="filterSelection('people')">print</button>
+          </div>
+      
+          <!-- Photo Grid -->
+          <div class="row">
+            <div class="column nature">
+              <img
+                src="/images/portfolio/11folio.jpg"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/11folio.jpg', 'Nature 1')"
+              />
+              <!-- Ajout de l'attribut onclick pour ouvrir le modal avec la bonne image -->
+              <img
+                src="/images/portfolio/12folio.jpg"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/12folio.jpg', 'Nature 2')"
+              />
+              <img
+                src="/images/portfolio/14folio.png"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/14folio.png', 'Nature 3')"
+              />
+              <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
+            </div>
+            <div class="column cars">
+              <img
+                src="/images/portfolio/15folio.png"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/15folio.png', 'Car 1')"
+              />
+              <img
+                src="/images/portfolio/2folio.png"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/2folio.png', 'Car 2')"
+              />
+              <img
+                src="/images/portfolio/5folio.png"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/5folio.png', 'Car 3')"
+              />
+              <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
+            </div>
+            <div class="column people">
+              <img
+                src="/images/portfolio/experatec_logo_0.png"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/experatec_logo_0.png', 'Person 1')"
+              />
+              <img
+                src="/images/portfolio/flyer_sophrologie.jpg"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/flyer_sophrologie.jpg', 'Person 2')"
+              />
+              <img
+                src="/images/portfolio/foliologo.png"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/foliologo.png', 'Person 3')"
+              />
+              <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
+            </div>
+            <div class="column cars">
+              <img
+                src="/images/portfolio/scene_autilink1.jpg"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/scene_autilink1.jpg', 'Car 4')"
+              />
+              <img
+                src="/images/portfolio/view_portfolio_0.jpg"
+                style="width: 100%"
+                onclick="openModal('/images/portfolio/view_portfolio_0.jpg', 'Car 5')"
+              />
+              <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
+            </div>
+          </div>
+      
+          <!-- Modal -->
+          <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg" />
+            <div id="modalCaption"></div>
+          </div>
+
+        </div>
+      
+        </section>
+
+    <div class="footer">Footer</div>
+  </body>
+</html>

@@ -1,0 +1,377 @@
+@import "variables";
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body,
+html {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: $secondary;
+}
+
+/* HEADER */
+.header {
+  background-color: $primary;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  text-align: center;
+
+  #triangle-langue {
+    display: block;
+    position: fixed;
+    right: -40px;
+    top: -40px;
+    background-color: $secondary;
+    width: 80px;
+    height: 80px;
+    padding-top: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    transform: rotate(45deg);
+    z-index: 999;
+  }
+
+  .langue {
+    display: block;
+    width: 30px;
+    height: 20px;
+    padding-left: 20px;
+    padding-top: 4px;
+    -ms-transform: rotate(-45deg); /* Internet Explorer */
+    -moz-transform: rotate(-45deg); /* Firefox */
+    -webkit-transform: rotate(-45deg); /* Safari et Chrome */
+    -o-transform: rotate(-45deg); /* Opera */
+
+    a:link,
+    a:active,
+    a:visited {
+      color: $primary;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    a:hover {
+      text-shadow: 0 0 5px $lightmedium;
+    }
+  }
+
+  .top-header {
+    display: flex;
+    align-items: flex-end;
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 150px;
+  }
+
+  /* LOGO */
+  .logotext {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 300px;
+    height: 150px;
+  }
+
+  .logo {
+    width: 104px;
+    height: 71px;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .txt-logo {
+    height: 30px;
+    padding-left: 5px;
+    color: $secondary;
+
+    .name {
+      font-family: "Comfortaa", sans-serif;
+      font-size: 20px;
+      padding-top: 9px;
+    }
+
+    .surname {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  /* MENU */
+  .navigation {
+    display: flex;
+    height: 86px;
+
+    .dark-mode & {
+      background-color: $secondary;
+
+      .menu li a {
+        color: $superlight;
+      }
+
+      .menu li a::before {
+        background-color: $primary;
+      }
+
+      .menu li a::after {
+        color: $secondary;
+      }
+    }
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu li {
+    display: inline-block;
+    margin: 0 30px;
+    position: relative;
+  }
+
+  .menu li a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+  }
+
+  .menu li a::before {
+    content: "";
+    position: absolute;
+    bottom: -62px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 62px;
+    background-color: $secondary;
+    transition: transform 0.3s ease-in-out, height 0.3s;
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+
+  .menu li a::after {
+    content: "\e876";
+    font-family: "Material Symbols Outlined", sans-serif;
+    font-size: 24px;
+    position: absolute;
+    top: calc(100% - -20px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: $primary;
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+
+  .menu li:hover a::before {
+    height: 62px;
+    transform: scaleY(1);
+    bottom: 0;
+  }
+
+  .menu li:hover a::after {
+    opacity: 1;
+  }
+}
+
+/* SWITCHER DARK LIGHT */
+.bottom-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  padding-right: 100px;
+  height: 30px;
+  width: 100%;
+  background-color: $secondary;
+  color: beige;
+
+  .dark-mode & {
+    background-color: $primary; // Fond en vert en mode sombre
+  }
+}
+
+/* CONTENT */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $superlight;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+
+  .photo-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 520px;
+
+    img {
+      max-width: 64%;
+      height: auto;
+    }
+  }
+
+  .txt-intro {
+    display: flex;
+    flex-direction: column;
+    width: 560px;
+    padding: 20px 80px 40px 80px;
+    font-size: 14px;
+    text-align: justify;
+
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 1.7em;
+
+      padding-bottom: 10px;
+      border-bottom: 3px solid $primary;
+      margin-bottom: 10px;
+    }
+
+    p {
+      border-bottom: 3px solid $primary;
+      margin-top: 10px;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+/* FOOTER */
+.footer {
+  height: 100px;
+  background-color: lightblue;
+}
+
+/* Switch Dark-Light */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 47px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $darklight;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $darkextralight;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: $darkmedium;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $darklight;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+//////////* DARK mode  *//////////
+/* HEADER DARK */
+/* Styles pour le mode sombre */
+.dark-mode {
+  background-color: $secondary;
+  color: $primary;
+
+  .header {
+    background-color: $secondary;
+
+    .txt-logo {
+      color: $primary;
+      padding-left: 0px;
+    }
+
+    .logo img {
+      content: url("/../images/JD_logo_yellow.png");
+      padding-top: 10px;
+    }
+  }
+
+  #triangle-langue {
+    background-color: $primary;
+  }
+
+  .langue a:link,
+  .langue a:active,
+  .langue a:visited {
+    color: $secondary;
+  }
+
+  .langue a:hover {
+    text-shadow: 0 0 5px $superlight;
+  }
+
+  /* Styles pour la balise main en mode sombre */
+  .main {
+    background-color: $secondary; // Changer la couleur de fond en mode sombre
+  }
+
+  p {
+    // Styles par défaut pour les paragraphes en mode sombre
+    color: $superlight;
+  }
+
+  /* Styles pour la balise h1 dans .intro en mode sombre */
+  .intro .txt-intro h1 {
+    color: $primary;
+  }
+}
