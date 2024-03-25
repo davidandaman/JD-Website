@@ -20,18 +20,11 @@
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
   background-color: $lightmedium;
   border: solid 1px $superlight;
   border-radius: 6px;
   padding: 20px;
-}
-
-.portfolio-container {
-  display: flex;
-  width: 1140px;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .row {
@@ -139,7 +132,7 @@
   width: 80%;
   max-width: 700px;
   text-align: center;
-  color: #ccc;
+  color: $superlight;
   padding: 10px 0;
   height: 150px;
 }

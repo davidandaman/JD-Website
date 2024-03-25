@@ -260,8 +260,16 @@ html {
 
 /* FOOTER */
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
-  background-color: lightblue;
+  width: 100%;
+  background-color: $superlight;
+  color: $secondary;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
 }
 
 /* Switch Dark-Light */

@@ -255,8 +255,16 @@ html {
 
 /* FOOTER */
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100px;
-  background-color: lightblue;
+  width: 100%;
+  background-color: #fefdf5;
+  color: #1b292e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
 }
 
 /* Switch Dark-Light */
@@ -392,18 +400,11 @@ input:checked + .slider:before {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
   background-color: #fbe864;
   border: solid 1px #fefdf5;
   border-radius: 6px;
   padding: 20px;
-}
-
-.portfolio-container {
-  display: flex;
-  width: 1140px;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .row {
@@ -509,7 +510,7 @@ input:checked + .slider:before {
   width: 80%;
   max-width: 700px;
   text-align: center;
-  color: #ccc;
+  color: #fefdf5;
   padding: 10px 0;
   height: 150px;
 }

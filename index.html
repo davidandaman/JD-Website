@@ -321,59 +321,48 @@
     <section class="skills-bar">
       <section class="skill-bar">
         <div class="wrap">
-
           <div class="bar">
             <h3>
               HTML5<abbr><span>90%</span></abbr>
             </h3>
             <div class="thumb"><span></span></div>
           </div>
-
-
           <div class="bar">
             <h3>
               CSS3<abbr><span>85%</span></abbr>
             </h3>
             <div class="thumb"><span></span></div>
           </div>
-
-
           <div class="bar">
             <h3>
               JAVASCRIPT<abbr><span>60%</span></abbr>
             </h3>
             <div class="thumb"><span></span></div>
           </div>
-
-
           <div class="bar">
             <h3>
               REACT<abbr><span>80%</span></abbr>
             </h3>
             <div class="thumb"><span></span></div>
           </div>
-
             <div class="bar">
               <h3>
                 DRUPAL<abbr><span>90%</span></abbr>
               </h3>
               <div class="thumb"><span></span></div>
             </div>
-
               <div class="bar">
                 <h3>
                   FIGMA<abbr><span>70%</span></abbr>
                 </h3>
                 <div class="thumb"><span></span></div>
               </div>
-  
               <div class="bar">
                 <h3>
                   ADOBE PHOTOSHOP<abbr><span>85%</span></abbr>
                 </h3>
                 <div class="thumb"><span></span></div>
               </div>
-
               <div class="bar">
                 <h3>
                   ADOBE ILLUSTRATOR<abbr><span>90%</span></abbr>
@@ -389,87 +378,83 @@
     <section class="portfolio">
       <h2>mon portfolio</h2>
       <div class="portfolio-header">
-
-          <div class="portfolio-container">
-       
-      
-          </div>
+ 
       
           <!-- Filter Buttons -->
           <div class="btn-container">
             <button class="btn active" onclick="filterSelection('all')">tous</button>
-            <button class="btn" onclick="filterSelection('nature')">web</button>
-            <button class="btn" onclick="filterSelection('cars')">design</button>
-            <button class="btn" onclick="filterSelection('people')">print</button>
+            <button class="btn" onclick="filterSelection('web')">web</button>
+            <button class="btn" onclick="filterSelection('design')">design</button>
+            <button class="btn" onclick="filterSelection('print')">print</button>
           </div>
       
           <!-- Photo Grid -->
           <div class="row">
-            <div class="column nature">
+            <div class="column web">
               <img
                 src="/images/portfolio/11folio.jpg"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/11folio.jpg', 'Nature 1')"
+                onclick="openModal('/images/portfolio/11folio.jpg', 'Web 1')"
               />
               <!-- Ajout de l'attribut onclick pour ouvrir le modal avec la bonne image -->
               <img
                 src="/images/portfolio/12folio.jpg"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/12folio.jpg', 'Nature 2')"
+                onclick="openModal('/images/portfolio/12folio.jpg', 'Web 2')"
               />
               <img
                 src="/images/portfolio/14folio.png"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/14folio.png', 'Nature 3')"
+                onclick="openModal('/images/portfolio/14folio.png', 'Web 3')"
               />
               <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
             </div>
-            <div class="column cars">
+            <div class="column design">
               <img
                 src="/images/portfolio/15folio.png"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/15folio.png', 'Car 1')"
+                onclick="openModal('/images/portfolio/15folio.png', 'Design 1')"
               />
               <img
                 src="/images/portfolio/2folio.png"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/2folio.png', 'Car 2')"
+                onclick="openModal('/images/portfolio/2folio.png', 'Design 2')"
               />
               <img
                 src="/images/portfolio/5folio.png"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/5folio.png', 'Car 3')"
+                onclick="openModal('/images/portfolio/5folio.png', 'Design 3')"
               />
               <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
             </div>
-            <div class="column people">
+            <div class="column print">
               <img
                 src="/images/portfolio/experatec_logo_0.png"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/experatec_logo_0.png', 'Person 1')"
+                onclick="openModal('/images/portfolio/experatec_logo_0.png', 'Print 1')"
               />
               <img
                 src="/images/portfolio/flyer_sophrologie.jpg"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/flyer_sophrologie.jpg', 'Person 2')"
+                onclick="openModal('/images/portfolio/flyer_sophrologie.jpg', 'Print 2')"
               />
               <img
                 src="/images/portfolio/foliologo.png"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/foliologo.png', 'Person 3')"
+                onclick="openModal('/images/portfolio/foliologo.png', 'Print 3')"
               />
               <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
             </div>
-            <div class="column cars">
+            <div class="column design">
               <img
                 src="/images/portfolio/scene_autilink1.jpg"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/scene_autilink1.jpg', 'Car 4')"
+                onclick="openModal('/images/portfolio/scene_autilink1.jpg', 'Design 4')"
               />
               <img
                 src="/images/portfolio/view_portfolio_0.jpg"
                 style="width: 100%"
-                onclick="openModal('/images/portfolio/view_portfolio_0.jpg', 'Car 5')"
+                onclick="openModal('/images/portfolio/view_portfolio_0.jpg', 'Design 5')"
               />
               <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
             </div>
@@ -481,11 +466,9 @@
             <img class="modal-content" id="modalImg" />
             <div id="modalCaption"></div>
           </div>
-
         </div>
-      
         </section>
 
-    <div class="footer">Footer</div>
+    <div class="footer">© 2024 Tous droits réservés à David JULIEN  </div>
   </body>
 </html>
