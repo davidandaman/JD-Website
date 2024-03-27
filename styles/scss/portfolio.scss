@@ -5,11 +5,8 @@
 
   h2 {
     display: flex;
-    max-width: 1140px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 10px;
     color: $secondary;
   }
 }
@@ -17,14 +14,11 @@
 .portfolio-header {
   display: flex;
   flex-direction: column;
-  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
   background-color: $lightmedium;
   border: solid 1px $superlight;
   border-radius: 6px;
-  padding: 20px;
 }
 
 .row {
@@ -32,7 +26,6 @@
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  max-width: 1140px;
   padding: 0 4px;
   margin-left: auto;
   margin-right: auto;
@@ -50,10 +43,9 @@
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
-  cursor: pointer; /* Ajout du curseur pointer pour indiquer que l'image est cliquable */
+  cursor: pointer;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
     -ms-flex: 50%;
@@ -62,7 +54,6 @@
   }
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .column {
     -ms-flex: 100%;
@@ -104,17 +95,17 @@
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 /* Modal Content (image) */
@@ -201,7 +192,7 @@
 
 .dark-mode .portfolio-header {
   background-color: $secondary;
-  border: solid 1px$darkmedium;
+  border: solid 1px $darkmedium;
 }
 
 .dark-mode .btn {
@@ -221,4 +212,77 @@
 .dark-mode .btn.active {
   background-color: $primary;
   color: $secondary;
+}
+
+////// RESPONSIVE /////////
+////// RESPONSIVE /////////
+////// RESPONSIVE /////////
+////// Responsive  Min 1240px /////////
+@media (min-width: 1240px) {
+  .portfolio {
+    h2 {
+      max-width: 1140px;
+      padding-top: 50px;
+      padding-bottom: 10px;
+      font-size: 1.7em;
+    }
+  }
+
+  .portfolio-header {
+    max-width: 1140px;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+
+  .row {
+    max-width: 1140px;
+  }
+}
+
+////// Responsive  Min 1024px - Max 1239px /////////
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .portfolio {
+    h2 {
+      max-width: 960px;
+      padding-top: 50px;
+      padding-bottom: 10px;
+      font-size: 1.7em;
+    }
+  }
+
+  .portfolio-header {
+    max-width: 960px;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+
+  .row {
+    max-width: 1140px;
+  }
+}
+
+////// Responsive  Min 768px -  Max 1023px /////////
+@media (min-width: 768px) and (max-width: 1023px) {
+  .portfolio {
+    h2 {
+      max-width: 720px;
+      padding-top: 50px;
+      padding-bottom: 10px;
+      font-size: 1.7em;
+    }
+  }
+
+  .portfolio-header {
+    max-width: 720px;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+
+  .row {
+    max-width: 1140px;
+  }
+}
+
+////// Responsive  Max 767px /////////
+@media (max-width: 767px) {
 }

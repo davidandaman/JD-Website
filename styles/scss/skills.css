@@ -17,33 +17,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 580px;
   background-color: #ffde01;
-  padding-top: 40px;
 }
 .skills-section h2 {
   display: inline-block;
-  width: 1140px;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 1.3em;
-  padding-bottom: 10px;
   margin: 0;
 }
 .skills-section .skills-tab {
   display: flex;
   flex-direction: column;
-  width: 1140px;
-  height: 404px;
   background-color: #fefdf5;
   border: solid 1px #2d4349;
-  padding: 30px;
 }
 .skills-section .skills-row-A {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 30px;
 }
 .skills-section .skills-row-B {
   display: flex;
@@ -52,9 +43,6 @@
 }
 .skills-section .flip-box {
   background-color: transparent;
-  width: 155px;
-  height: 155px;
-  perspective: 1000px;
 }
 .skills-section .flip-box-inner {
   position: relative;
@@ -92,19 +80,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding-top: 25px;
-}
-.skills-section .flip-content h3 {
-  color: #fefdf5;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 1em;
-  margin-top: 10px;
-}
-.skills-section .flip-content p {
-  padding: 10px;
-  font-size: 0.8em;
-  margin-top: -10px;
+  padding-top: 10px;
 }
 
 /* Styles pour les barres de compétences */
@@ -113,8 +89,6 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 100px;
-  padding-bottom: 100px;
   background-color: #fefdf5;
 }
 .skill-bar h3 {
@@ -273,6 +247,323 @@
 
 .bar:nth-child(8) abbr {
   left: 90%;
+}
+
+@media (min-width: 1240px) {
+  .skills-section {
+    height: 580px;
+    padding-top: 40px;
+  }
+  .skills-section h2 {
+    width: 1140px;
+    font-size: 1.7em;
+    padding-bottom: 10px;
+  }
+  .skills-section .skills-tab {
+    width: 1140px;
+    height: 404px;
+    padding: 30px;
+  }
+  .skills-section .skills-row-A {
+    margin-bottom: 30px;
+  }
+  .flip-box {
+    width: 155px;
+    height: 155px;
+    perspective: 1000px;
+  }
+  .flip-content h3 {
+    color: #fefdf5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  .flip-content p {
+    padding: 10px;
+    font-size: 0.8em;
+    margin-top: -10px;
+  }
+  .skill-bar {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .skills-section {
+    height: 475px;
+    padding-top: 24px;
+  }
+  .skills-section h2 {
+    width: 1000px;
+    font-size: 1.7em;
+    padding-bottom: 10px;
+  }
+  .skills-section .skills-tab {
+    width: 1000px;
+    height: 342px;
+    padding: 20px;
+  }
+  .skills-section .skills-row-A {
+    margin-bottom: 20px;
+  }
+  .flip-box {
+    width: 140px;
+    height: 140px;
+    perspective: 1000px;
+  }
+  .flip-content img {
+    max-width: 60%;
+    height: auto;
+  }
+  .flip-content h3 {
+    color: #fefdf5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    margin-top: 10px;
+  }
+  .flip-content p {
+    padding: 10px;
+    font-size: 0.8em;
+    margin-top: -10px;
+  }
+  .skill-bar {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .skills-section {
+    height: 380px;
+  }
+  .skills-section h2 {
+    width: 740px;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
+  .skills-section .skills-tab {
+    width: 740px;
+    height: 254px;
+    padding: 10px;
+  }
+  .skills-section .skills-row-A {
+    margin-bottom: 10px;
+  }
+  .flip-box {
+    width: 110px;
+    height: 110px;
+    perspective: 740px;
+  }
+  .flip-content img {
+    max-width: 60%;
+    height: auto;
+  }
+  .flip-content h3 {
+    color: #fefdf5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    margin-top: 10px;
+  }
+  .flip-content p {
+    padding: 10px;
+    font-size: 0.6em;
+    margin-top: -10px;
+  }
+  .skill-bar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 560px) and (max-width: 767px) {
+  .skills-section {
+    height: 740px;
+  }
+  .skills-section h2 {
+    width: 300px;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
+  .skills-section .skills-tab {
+    width: 90%;
+    height: 640px;
+    padding: 10px;
+    padding-top: 20px;
+  }
+  .skills-section .skills-row-A {
+    display: block;
+    justify-content: space-between;
+    width: 98%;
+    padding-left: 2%;
+  }
+  .skills-section .skills-row-B {
+    display: block;
+    width: 98%;
+    padding-left: 2%;
+  }
+  .flip-box {
+    display: block;
+    float: left;
+    width: 31.3%;
+    height: 140px;
+    margin: 1%;
+    perspective: 800px;
+    overflow: hidden;
+  }
+  .flip-content img {
+    max-width: 60%;
+    height: auto;
+  }
+  .flip-content h3 {
+    color: #fefdf5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    margin-top: 10px;
+  }
+  .flip-content p {
+    overflow: hidden; /* Cache le texte qui dépasse */
+    max-height: 83px; /* Hauteur maximale avant que le texte ne soit coupé */
+    padding: 10px; /* Garder le padding */
+    font-size: 0.8em; /* Taille de police spécifiée */
+    margin-top: -20px; /* Ajustement de la marge pour l'alignement */
+  }
+  .skill-bar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .skill-bar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 414px) and (max-width: 559px) {
+  .skills-section {
+    height: 650px;
+  }
+  .skills-section h2 {
+    width: 300px;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
+  .skills-section .skills-tab {
+    width: 90%;
+    height: 550px;
+    padding: 10px;
+    padding-top: 20px;
+  }
+  .skills-section .skills-row-A {
+    display: block;
+    justify-content: space-between;
+    width: 98%;
+    padding-left: 2%;
+  }
+  .skills-section .skills-row-B {
+    display: block;
+    width: 98%;
+    padding-left: 2%;
+  }
+  .flip-box {
+    display: block;
+    float: left;
+    width: 31.3%;
+    height: 120px;
+    margin: 1%;
+    perspective: 800px;
+    overflow: hidden;
+  }
+  .flip-content img {
+    max-width: 60%;
+    height: auto;
+  }
+  .flip-content h3 {
+    color: #fefdf5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.6em;
+    margin-top: 10px;
+  }
+  .flip-content p {
+    overflow: hidden; /* Cache le texte qui dépasse */
+    max-height: 83px; /* Hauteur maximale avant que le texte ne soit coupé */
+    padding: 10px; /* Garder le padding */
+    font-size: 0.6em; /* Taille de police spécifiée */
+    margin-top: -20px; /* Ajustement de la marge pour l'alignement */
+  }
+  .skill-bar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .skill-bar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 413px) {
+  .skills-section {
+    height: 550px;
+  }
+  .skills-section h2 {
+    width: 300px;
+    font-size: 1.5em;
+    padding-bottom: 10px;
+    padding-top: 30px;
+  }
+  .skills-section .skills-tab {
+    width: 90%;
+    height: 444px;
+    padding: 10px;
+  }
+  .skills-section .skills-row-A {
+    display: block;
+    justify-content: space-between;
+    width: 99%;
+    padding-left: 3px;
+  }
+  .skills-section .skills-row-B {
+    display: block;
+    width: 99%;
+    padding-left: 3px;
+  }
+  .flip-box {
+    display: block;
+    float: left;
+    width: 31.325%;
+    height: 100px;
+    margin: 1%;
+    perspective: 400px;
+    overflow: hidden;
+  }
+  .flip-content img {
+    max-width: 60%;
+    height: auto;
+  }
+  .flip-content h3 {
+    color: #fefdf5;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.6em;
+    margin-top: 10px;
+  }
+  .flip-content p {
+    overflow: hidden; /* Cache le texte qui dépasse */
+    max-height: 83px; /* Hauteur maximale avant que le texte ne soit coupé */
+    padding: 10px; /* Garder le padding */
+    font-size: 0.5em; /* Taille de police spécifiée */
+    margin-top: -20px; /* Ajustement de la marge pour l'alignement */
+  }
+  .skill-bar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .skill-bar {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 /*# sourceMappingURL=skills.css.map */

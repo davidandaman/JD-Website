@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de contact</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Contactez-nous</h2>
+
+    <form id="contactForm">
+      <div>
+        <label for="name">Nom:</label><br />
+        <input type="text" id="name" name="name" /><br />
+        <span id="nameError" class="error"></span>
+      </div>
+      <div>
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" /><br />
+        <span id="emailError" class="error"></span>
+      </div>
+      <div>
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message"></textarea><br />
+        <span id="messageError" class="error"></span>
+      </div>
+      <div>
+        <button type="submit">Envoyer</button>
+      </div>
+    </form>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var name = document.getElementById("name").value.trim();
+          var email = document.getElementById("email").value.trim();
+          var message = document.getElementById("message").value.trim();
+
+          var nameError = document.getElementById("nameError");
+          var emailError = document.getElementById("emailError");
+          var messageError = document.getElementById("messageError");
+
+          nameError.textContent = "";
+          emailError.textContent = "";
+          messageError.textContent = "";
+
+          if (name === "") {
+            nameError.textContent = "Veuillez saisir votre nom";
+            return;
+          }
+
+          if (email === "") {
+            emailError.textContent = "Veuillez saisir votre email";
+            return;
+          }
+
+          if (!isValidEmail(email)) {
+            emailError.textContent = "Veuillez saisir une adresse email valide";
+            return;
+          }
+
+          if (message === "") {
+            messageError.textContent = "Veuillez saisir votre message";
+            return;
+          }
+
+          // Envoyer le formulaire ici
+          console.log("Nom:", name);
+          console.log("Email:", email);
+          console.log("Message:", message);
+
+          // Réinitialiser le formulaire
+          document.getElementById("contactForm").reset();
+        });
+
+      function isValidEmail(email) {
+        // Vérification simple de l'adresse email
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+      }
+    </script>
+  </body>
+</html>

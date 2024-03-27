@@ -21,6 +21,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- Fichiers JS-->
     <script src="/js/dark-light.js"></script>
     <script src="/js/skills-bar.js"></script>
@@ -29,6 +30,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <span class="material-symbols-outlined">
+        keyboard_control_key
+      </span>
+    </button>
     <div class="header dark-mode-header">
       <div id="triangle-langue">
         <div class="langue"><a href="#">en</a></div>
@@ -44,9 +50,9 @@
         </div>
         <div class="navigation dark-mode-navigation">
           <ul class="menu">
-            <li><a href="#">Compétences</a></li>
+            <li><a href="#section-competences">Compétences</a></li>
             <li><a href="#">Pédagogie</a></li>
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="#section-portfolio">Portfolio</a></li>
             <li><a href="#">Contactez-moi</a></li>
           </ul>
         </div>
@@ -57,6 +63,9 @@
         <input type="checkbox" onclick="darkLight()" />
         <span class="slider round"></span>
       </label>
+      <div class="nav-mobile">
+        XXX
+      </div>
     </div>
     <div class="main">
       <section class="intro">
@@ -83,6 +92,7 @@
         </div>
       </section>
     </div>
+    
     <section class="skills-section">
       <h2>Je travaille avec...</h2>
       <div class="skills-tab">
@@ -317,7 +327,7 @@
       </div>
     </section>
     <!-- SKILLS BAR -->
-    <section class="skills-bar">
+    <section class="skills-bar" id="section-competences">
       <section class="skill-bar">
         <div class="wrap">
           <div class="bar">
@@ -373,9 +383,9 @@
       </section>
     </section>
 
-        <!-- SKILLS BAR -->
-    <section class="portfolio">
-      <h2>mon portfolio</h2>
+   <!-- PORTFOLIO -->
+    <section class="portfolio" id="section-portfolio">
+      <h2>mon portfolio...</h2>
       <div class="portfolio-header">
  
           <!-- Filter Buttons -->
@@ -391,17 +401,20 @@
             <div class="column web">
               <img
                 src="/images/portfolio/11folio.jpg"
+                alt="Web 1"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/11folio.jpg', 'Web 1')"
               />
               <!-- Ajout de l'attribut onclick pour ouvrir le modal avec la bonne image -->
               <img
                 src="/images/portfolio/12folio.jpg"
+                alt="Web 2"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/12folio.jpg', 'Web 2')"
               />
               <img
                 src="/images/portfolio/14folio.png"
+                alt="Web 3"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/14folio.png', 'Web 3')"
               />
@@ -410,16 +423,19 @@
             <div class="column design">
               <img
                 src="/images/portfolio/15folio.png"
+                alt="Design 1"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/15folio.png', 'Design 1')"
               />
               <img
                 src="/images/portfolio/2folio.png"
+                alt="Design 2"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/2folio.png', 'Design 2')"
               />
               <img
                 src="/images/portfolio/5folio.png"
+                alt="Design 3"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/5folio.png', 'Design 3')"
               />
@@ -428,16 +444,19 @@
             <div class="column print">
               <img
                 src="/images/portfolio/experatec_logo_0.png"
+                alt="Print 1"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/experatec_logo_0.png', 'Print 1')"
               />
               <img
                 src="/images/portfolio/flyer_sophrologie.jpg"
+                alt="Print 2"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/flyer_sophrologie.jpg', 'Print 2')"
               />
               <img
                 src="/images/portfolio/foliologo.png"
+                alt="Print 3"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/foliologo.png', 'Print 3')"
               />
@@ -446,11 +465,13 @@
             <div class="column design">
               <img
                 src="/images/portfolio/scene_autilink1.jpg"
+                alt="Design 4"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/scene_autilink1.jpg', 'Design 4')"
               />
               <img
                 src="/images/portfolio/view_portfolio_0.jpg"
+                
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/view_portfolio_0.jpg', 'Design 5')"
               />
@@ -467,5 +488,6 @@
         </section>
 
     <div class="footer">© 2024 Tous droits réservés à David JULIEN  </div>
+    <script src="/js/on-top.js"></script>
   </body>
 </html>

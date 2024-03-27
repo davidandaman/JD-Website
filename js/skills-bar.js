@@ -14,11 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // Calcul de la position de l'abbr en pixels
         const abbrPosition = (percentage / 100) * (barWidth - abbrWidth);
 
-        console.log("Percentage:", percentage);
-        console.log("Bar Width:", barWidth);
-        console.log("Abbreviation Width:", abbrWidth);
-        console.log("Calculated Abbreviation Position:", abbrPosition);
-
         gsap.set(thumbSpan, { scaleX: 0 });
         gsap.to(thumbSpan, {
           scaleX: 1,

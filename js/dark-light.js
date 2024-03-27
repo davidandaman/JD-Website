@@ -4,8 +4,14 @@ function darkLight() {
 
   if (switcher.checked) {
     enableDarkMode();
+    document.querySelectorAll(".nav-mobile").forEach(function (nav) {
+      nav.style.color = "pink";
+    });
   } else {
     disableDarkMode();
+    document.querySelectorAll(".nav-mobile").forEach(function (nav) {
+      nav.style.color = "green";
+    });
   }
   localStorage.setItem("darkModeEnabled", switcher.checked);
 }
