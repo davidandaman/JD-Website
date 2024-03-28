@@ -39,12 +39,13 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 500;
   text-align: center;
   /* MENU */
 }
 .header .top-header {
   display: flex;
+  flex: 0 0 auto;
   align-items: flex-end;
   margin-left: auto;
   margin-right: auto;
@@ -700,6 +701,48 @@ input:checked + .slider:before {
   .menu {
     display: none;
   }
+  .sidepanel {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: width 0.5s;
+    padding-top: 60px;
+  }
+  .sidepanel a {
+    padding: 10px 10px 40px 26px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fefdf5;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidepanel a:hover {
+    color: #ffde01;
+  }
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  .openbtn {
+    font-size: 36px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #1b292e;
+    padding-bottom: 6px;
+    border: none;
+    z-index: 1000; /* Assurez-vous que le bouton d'ouverture est au-dessus de tout */
+  }
+  .openbtn:hover {
+    background-color: #1b292e;
+    color: #ffde01;
+  }
   /* LOGO */
   .logotext {
     display: flex;
@@ -734,6 +777,7 @@ input:checked + .slider:before {
   /* SWITCHER DARK LIGHT */
   .bottom-header {
     display: flex;
+    flex: 0 0 auto;
     flex-direction: row;
     align-items: center;
     justify-content: start;
@@ -807,6 +851,9 @@ input:checked + .slider:before {
     font-size: 14px;
     line-height: 1.8em;
     margin-bottom: 30px;
+  }
+  .footer {
+    font-size: 0.8em;
   }
   #myBtn {
     display: none;

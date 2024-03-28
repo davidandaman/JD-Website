@@ -53,12 +53,13 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 500;
   text-align: center;
   /* MENU */
 }
 .header .top-header {
   display: flex;
+  flex: 0 0 auto;
   align-items: flex-end;
   margin-left: auto;
   margin-right: auto;
@@ -714,6 +715,48 @@ input:checked + .slider:before {
   .menu {
     display: none;
   }
+  .sidepanel {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: width 0.5s;
+    padding-top: 60px;
+  }
+  .sidepanel a {
+    padding: 10px 10px 40px 26px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fefdf5;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidepanel a:hover {
+    color: #ffde01;
+  }
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  .openbtn {
+    font-size: 36px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #1b292e;
+    padding-bottom: 6px;
+    border: none;
+    z-index: 1000; /* Assurez-vous que le bouton d'ouverture est au-dessus de tout */
+  }
+  .openbtn:hover {
+    background-color: #1b292e;
+    color: #ffde01;
+  }
   /* LOGO */
   .logotext {
     display: flex;
@@ -748,6 +791,7 @@ input:checked + .slider:before {
   /* SWITCHER DARK LIGHT */
   .bottom-header {
     display: flex;
+    flex: 0 0 auto;
     flex-direction: row;
     align-items: center;
     justify-content: start;
@@ -821,6 +865,9 @@ input:checked + .slider:before {
     font-size: 14px;
     line-height: 1.8em;
     margin-bottom: 30px;
+  }
+  .footer {
+    font-size: 0.8em;
   }
   #myBtn {
     display: none;
@@ -902,14 +949,11 @@ input:checked + .slider:before {
 /* Style the buttons */
 .btn-container {
   text-align: center;
-  padding-top: 20px;
-  margin-bottom: 30px;
 }
 
 .btn {
   border: none;
   outline: none;
-  padding: 12px 16px;
   background-color: #eecf00;
   color: #1b292e;
   font-family: "Montserrat", sans-serif;
@@ -917,7 +961,6 @@ input:checked + .slider:before {
   font-size: 1.2em;
   border-radius: 6px;
   cursor: pointer;
-  margin: 0 8px;
 }
 
 .btn:hover {
@@ -1094,6 +1137,47 @@ input:checked + .slider:before {
   }
   .row {
     max-width: 1140px;
+  }
+}
+@media (min-width: 490px) {
+  /* Style the buttons */
+  .btn-container {
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+  .btn {
+    padding: 12px 16px;
+    margin: 0 8px;
+  }
+}
+@media (max-width: 489px) {
+  /* Style the buttons */
+  .btn-container {
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+  .btn {
+    min-width: 100px;
+    padding: 16px 18px;
+    margin: 6px 6px;
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio h2 {
+    max-width: 90%;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .portfolio-header {
+    max-width: 90%;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+  .row {
+    max-width: 90% x;
   }
 }
 :root {
@@ -1479,7 +1563,7 @@ input:checked + .slider:before {
     height: 740px;
   }
   .skills-section h2 {
-    width: 300px;
+    width: 90%;
     font-size: 1.5em;
     padding-bottom: 10px;
     padding-top: 30px;
@@ -1647,10 +1731,10 @@ input:checked + .slider:before {
     margin-top: 10px;
   }
   .flip-content p {
-    overflow: hidden; /* Cache le texte qui dépasse */
-    max-height: 83px; /* Hauteur maximale avant que le texte ne soit coupé */
-    padding: 10px; /* Garder le padding */
-    font-size: 0.5em; /* Taille de police spécifiée */
+    overflow: hidden;
+    max-height: 83px;
+    padding: 10px;
+    font-size: 0.5em;
     margin-top: -20px; /* Ajustement de la marge pour l'alignement */
   }
   .skill-bar {

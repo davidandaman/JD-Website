@@ -382,7 +382,7 @@
     height: 740px;
   }
   .skills-section h2 {
-    width: 300px;
+    width: 90%;
     font-size: 1.5em;
     padding-bottom: 10px;
     padding-top: 30px;
@@ -550,10 +550,10 @@
     margin-top: 10px;
   }
   .flip-content p {
-    overflow: hidden; /* Cache le texte qui dépasse */
-    max-height: 83px; /* Hauteur maximale avant que le texte ne soit coupé */
-    padding: 10px; /* Garder le padding */
-    font-size: 0.5em; /* Taille de police spécifiée */
+    overflow: hidden;
+    max-height: 83px;
+    padding: 10px;
+    font-size: 0.5em;
     margin-top: -20px; /* Ajustement de la marge pour l'alignement */
   }
   .skill-bar {
