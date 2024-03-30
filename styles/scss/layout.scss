@@ -934,14 +934,6 @@ input:checked + .slider:before {
 
     .nav-mobile {
       margin-left: auto;
-      color: green; // Couleur du texte par défaut
-    }
-
-    .dark-mode {
-      /* Modifier les couleurs pour le mode sombre */
-      .nav-mobile {
-        color: pink; /* Changer la couleur du texte en mode sombre */
-      }
     }
 
     .dark-mode & {
@@ -1044,27 +1036,32 @@ input:checked + .slider:before {
   width: 100%;
   padding-left: 20%;
   padding-right: 20%;
+  text-align: left;
+
+  label {
+    color: $darkextralight;
+  }
 }
 
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 36px;
-  color: #da0f0f;
+  font-size: 10px;
+  color: $superlight;
   display: block;
   transition: 0.3s;
 }
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #f1f1f1;
+  color: $primary;
 }
 
 .overlay .closebtn {
   position: absolute;
   top: 0px;
-  right: 20px;
-  font-size: 60px;
+  right: 30px;
+  font-size: 40px;
 }
 
 @media screen and (max-height: 450px) {
@@ -1079,33 +1076,85 @@ input:checked + .slider:before {
 }
 
 input[type="text"],
+input[type="email"],
 select,
 textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  background-color: $darkmedium;
+  border-left: 1px solid $darkmedium;
+  border-top: 1px solid $darkmedium;
+  border-bottom: 1px solid $darkextralight;
+  border-right: 1px solid $darkmedium;
+  border-radius: 0px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  font-size: 1.1em;
+  color: $superlight;
+
+  -webkit-box-shadow: inset 0 0 7px $superdark;
+  -moz-box-shadow: inset 0 0 7px $superdark;
+  box-shadow: inset 0 0 7px $superdark;
 }
 
 input[type="submit"] {
-  background-color: #04aa6d;
-  color: white;
+  display: flex;
+  width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  background-color: $primary;
+  color: $secondary;
   padding: 12px 20px;
+  font-size: 1.2em;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
+  border: solid 2px transparent;
+  border-radius: 0px;
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: $secondary;
+  color: $primary;
+  border: solid 2px $primary;
 }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+@media (min-width: 768px) {
+  .contact-mobile {
+    display: none;
+    content: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-mobile {
+    display: flex;
+    width: 300px;
+    background-color: $secondary;
+    color: $primary;
+    font-size: 1.3em;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 20px 10px 20px 10px;
+    border: solid 2px transparent;
+
+    span {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .contact-mobile:hover {
+    background-color: $primary;
+    color: $secondary;
+    border: solid 2px $secondary;
+  }
+
+  .dark-mode .contact-mobile {
+    background-color: $primary;
+    color: $secondary;
+  }
 }

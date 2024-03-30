@@ -63,10 +63,13 @@
     <div class="overlay-content">
       <form action="envoyer_email.php" method="post">
         <label for="fname">Prénom</label>
-        <input type="text" id="fname" name="firstname" placeholder="Votre prénom..">
+        <input type="text" id="fname" name="firstname" placeholder="Votre prénom.." required>
         <label for="lname">Nom</label>
-        <input type="text" id="lname" name="lastname" placeholder="Votre nom..">
+        <input type="text" id="lname" name="lastname" placeholder="Votre nom.." required>
   
+        <label for="lemail">Enter your email:</label>
+        <input type="email" id="lemail" name="email" placeholder="Votre email.."required>
+
         <label for="country">Pays</label>
         <select id="country" name="country">
           <option value="france">France</option>
@@ -76,7 +79,7 @@
           <option value="autre">Autre</option>
         </select>
       <label for="subject">Objet</label>
-      <textarea id="subject" name="subject" placeholder="Votre message.." style="height:200px"></textarea>
+      <textarea id="subject" name="subject" placeholder="Votre message.." style="height:200px" required> </textarea>
       <input type="submit" value="Envoyer">
       </form>
     </div>
@@ -95,7 +98,6 @@
           <a href="#section-competences">Compétences</a>
           <a href="#">Conception pédagogique</a>
           <a href="#section-portfolio">Portfolio</a>
-          <a href="#">Contact</a>
         </div>
         <button class="openbtn" onclick="openNav()">☰</button>  
       </div>
@@ -508,6 +510,10 @@
           </div>
         </div>
         </section>
+
+        <div class="contact-mobile">
+          <span style="cursor:pointer" onclick="openNavForm()">Contact</span>
+        </div>
 
     <div class="footer">© 2024 Tous droits réservés à David JULIEN  </div>
     <script src="/js/on-top.js"></script>
