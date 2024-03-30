@@ -30,7 +30,6 @@ function enableDarkMode() {
   element.classList.add("dark-mode");
   header.classList.add("dark-mode-header");
   txtLogo.classList.add("dark-mode-text");
-  logoImage.src = "../../images/JD_logo_yellow_bk.png";
 
   triangleLangue.classList.add("dark-mode-triangle");
   langueLinks.forEach((link) => {

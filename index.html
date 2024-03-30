@@ -27,6 +27,7 @@
     <script src="/js/toggle.js"></script>  
     <script src="/js/skills-bar.js"></script>
     <script src="/js/portffolio.js"></script>
+    <script src="/js/contact.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   </head>
@@ -54,8 +55,32 @@
             <li><a href="#section-competences">Compétences</a></li>
             <li><a href="#">Ingénierie pédagogique</a></li>
             <li><a href="#section-portfolio">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+            <li><a style="cursor:pointer" onclick="openNavForm()">Contact</a> </li>
+          </ul> 
+          <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNavForm()">&times;</a>
+  <!-- Overlay content -->
+    <div class="overlay-content">
+      <form action="envoyer_email.php" method="post">
+        <label for="fname">Prénom</label>
+        <input type="text" id="fname" name="firstname" placeholder="Votre prénom..">
+        <label for="lname">Nom</label>
+        <input type="text" id="lname" name="lastname" placeholder="Votre nom..">
+  
+        <label for="country">Pays</label>
+        <select id="country" name="country">
+          <option value="france">France</option>
+          <option value="canada">Canada</option>
+          <option value="suisse">Suisse</option>
+          <option value="belgique">Belgique</option>
+          <option value="autre">Autre</option>
+        </select>
+      <label for="subject">Objet</label>
+      <textarea id="subject" name="subject" placeholder="Votre message.." style="height:200px"></textarea>
+      <input type="submit" value="Envoyer">
+      </form>
+    </div>
+  </div>
         </div>
       </div>
     </div>
@@ -65,7 +90,6 @@
         <span class="slider round"></span>
       </label>
       <div class="nav-mobile">
-       
         <div id="mySidepanel" class="sidepanel">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
           <a href="#section-competences">Compétences</a>
@@ -73,10 +97,7 @@
           <a href="#section-portfolio">Portfolio</a>
           <a href="#">Contact</a>
         </div>
-        
         <button class="openbtn" onclick="openNav()">☰</button>  
-
-
       </div>
     </div>
     <div class="main">
@@ -104,7 +125,6 @@
         </div>
       </section>
     </div>
-    
     <section class="skills-section">
       <h2>Je travaille avec...</h2>
       <div class="skills-tab">
@@ -125,7 +145,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 2 CSS -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -142,7 +161,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 3 DRUPAL -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -161,7 +179,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 4 JS -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -181,7 +198,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 5 REACT -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -201,7 +217,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 6 REDUX -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -239,7 +254,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 8 PHOTOSHOP -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -256,7 +270,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 9 ILLUSTRATOR -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -278,7 +291,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 10 POSTMAN -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -295,7 +307,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 11 SWAGGER -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -315,7 +326,6 @@
               </div>
             </div>
           </div>
-
           <!-- skill 12 LIGHTHOUSE -->
           <div class="flip-box">
             <div class="flip-box-inner">
@@ -483,7 +493,7 @@
               />
               <img
                 src="/images/portfolio/view_portfolio_0.jpg"
-                
+                alt="Design 5"
                 style="width: 100%"
                 onclick="openModal('/images/portfolio/view_portfolio_0.jpg', 'Design 5')"
               />
