@@ -200,7 +200,6 @@ input:checked + .slider:before {
   transform: translateX(22px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -265,7 +264,6 @@ input:checked + .slider:before {
 
 //////////* DARK mode  *//////////
 /* HEADER DARK */
-/* Styles pour le mode sombre */
 .dark-mode {
   background-color: $secondary;
   color: $primary;
@@ -315,17 +313,12 @@ input:checked + .slider:before {
 }
 
 ////// RESPONSIVE /////////
-////// RESPONSIVE /////////
-////// RESPONSIVE /////////
 ////// Responsive  Min 1240px /////////
 @media (min-width: 1240px) {
   // Header //
   .navigation {
     margin-left: 150px;
   }
-
-  // Skills //
-  // Portfolio //
 }
 
 ////// Responsive  Min 1024px - Max 1239px /////////
@@ -334,8 +327,6 @@ input:checked + .slider:before {
   .navigation {
     margin-left: -10px;
   }
-  // Skills //
-  // Portfolio //
 }
 
 ////// Responsive  Min 1024px /////////
@@ -483,7 +474,6 @@ input:checked + .slider:before {
   }
 
   /* CONTENT */
-
   .intro {
     display: flex;
     flex-direction: row;
@@ -524,7 +514,6 @@ input:checked + .slider:before {
 ////// Responsive  Min 768px -  Max 1023px /////////
 @media (min-width: 768px) and (max-width: 1023px) {
   // Header //
-
   .top-header {
     width: 100%;
     height: 120px;
@@ -706,8 +695,6 @@ input:checked + .slider:before {
       }
     }
   }
-  // Skills //
-  // Portfolio //
 }
 
 @media (min-width: 768px) {
@@ -1016,7 +1003,6 @@ input:checked + .slider:before {
 }
 
 // Contact Form //
-
 .overlay {
   height: 100%;
   width: 0;
@@ -1036,6 +1022,7 @@ input:checked + .slider:before {
   width: 100%;
   padding-left: 20%;
   padding-right: 20%;
+  padding-bottom: 30px;
   text-align: left;
 
   label {
@@ -1101,23 +1088,26 @@ textarea {
 
 input[type="submit"] {
   display: flex;
-  width: 100%;
+  width: 200px;
   margin: auto;
   margin-top: 20px;
+
   background-color: $primary;
   color: $secondary;
   padding: 12px 20px;
   font-size: 1.2em;
   border: none;
   cursor: pointer;
-  border: solid 2px transparent;
+  background-color: $secondary;
+  color: $primary;
+  border: solid 2px $primary;
   border-radius: 0px;
 }
 
 input[type="submit"]:hover {
-  background-color: $secondary;
-  color: $primary;
-  border: solid 2px $primary;
+  background-color: $primary;
+  color: $secondary;
+  border: solid 2px transparent;
 }
 
 @media (min-width: 768px) {

@@ -4,14 +4,8 @@ function darkLight() {
 
   if (switcher.checked) {
     enableDarkMode();
-    document.querySelectorAll(".nav-mobile").forEach(function (nav) {
-      nav.style.color = "pink";
-    });
   } else {
     disableDarkMode();
-    document.querySelectorAll(".nav-mobile").forEach(function (nav) {
-      nav.style.color = "green";
-    });
   }
   localStorage.setItem("darkModeEnabled", switcher.checked);
 }
@@ -21,7 +15,6 @@ function enableDarkMode() {
   const element = document.body;
   const header = document.querySelector(".header");
   const txtLogo = document.querySelector(".txt-logo");
-  const logoImage = document.querySelector(".logo img");
   const triangleLangue = document.getElementById("triangle-langue");
   const langueLinks = document.querySelectorAll(".langue a");
   const skillsImages = document.querySelectorAll(".skills-section img");
@@ -74,7 +67,6 @@ function disableDarkMode() {
   const element = document.body;
   const header = document.querySelector(".header");
   const txtLogo = document.querySelector(".txt-logo");
-  const logoImage = document.querySelector(".logo img");
   const triangleLangue = document.getElementById("triangle-langue");
   const langueLinks = document.querySelectorAll(".langue a");
   const skillsImages = document.querySelectorAll(".skills-section img");
@@ -83,7 +75,6 @@ function disableDarkMode() {
   element.classList.remove("dark-mode");
   header.classList.remove("dark-mode-header");
   txtLogo.classList.remove("dark-mode-text");
-  logoImage.src = "./images/JD_logo_black.png";
 
   triangleLangue.classList.remove("dark-mode-triangle");
   langueLinks.forEach((link) => {
@@ -125,7 +116,13 @@ function disableDarkMode() {
 
 // Initialiser le mode sombre
 function initializeDarkMode() {
-  const darkModeEnabled = localStorage.getItem("darkModeEnabled") === "true";
+  let darkModeEnabled = localStorage.getItem("darkModeEnabled");
+  // Si la valeur n'est pas déjà stockée dans le localStorage, on va considérer le mode sombre par défaut
+  if (darkModeEnabled === null) {
+    darkModeEnabled = true;
+  } else {
+    darkModeEnabled = darkModeEnabled === "true";
+  }
   const switcher = document.querySelector(".switch input");
   switcher.checked = darkModeEnabled;
   if (darkModeEnabled) {

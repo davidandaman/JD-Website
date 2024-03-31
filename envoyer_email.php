@@ -1,17 +1,27 @@
 <?php
 // Destinataire
-$to = "
-contact@julien-david.com";
+$to = "contact@julien-david.com";
 
 // Sujet de l'e-mail
-$subject = "Test d'envoi d'e-mail";
+$subject = "Formulaire de contact soumis";
 
-// Contenu de l'e-mail
-$message = "Ceci est un message de test pour vérifier l'envoi d'e-mail via PHP.";
+// Récupération des données du formulaire
+$firstname = isset($_POST['firstname']) ? $_POST['firstname'] : '';
+$lastname = isset($_POST['lastname']) ? $_POST['lastname'] : '';
+$email = isset($_POST['email']) ? $_POST['email'] : '';
+$country = isset($_POST['country']) ? $_POST['country'] : '';
+$message_content = isset($_POST['subject']) ? $_POST['subject'] : '';
+
+// Construction du message
+$message = "Prénom: $firstname\n";
+$message .= "Nom: $lastname\n";
+$message .= "Email: $email\n";
+$message .= "Pays: $country\n\n";
+$message .= "Message:\n$message_content";
 
 // En-têtes de l'e-mail
-$headers = "From: contact@julien-david.com" . "\r\n" .
-           "Reply-To: contact@julien-david.com" . "\r\n" .
+$headers = "From: $email" . "\r\n" .
+           "Reply-To: $email" . "\r\n" .
            "X-Mailer: PHP/" . phpversion();
 
 // Envoi de l'e-mail
