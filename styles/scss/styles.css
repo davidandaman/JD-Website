@@ -308,7 +308,7 @@ input:checked + .slider:before {
   background-color: #1b292e;
 }
 .dark-mode p {
-  color: #fefdf5;
+  color: #ffffff;
 }
 .dark-mode .intro .txt-intro h1 {
   color: #ffde01;
@@ -659,7 +659,7 @@ input:checked + .slider:before {
     position: fixed;
     bottom: 10px;
     right: 30px;
-    z-index: 99;
+    z-index: 20;
     border: none;
     outline: none;
     background: #0d1416;
@@ -779,11 +779,9 @@ input:checked + .slider:before {
     font-size: 36px;
   }
   .openbtn {
-    font-size: 36px;
     cursor: pointer;
     background-color: transparent;
     color: #ffde01;
-    padding-bottom: 7px;
     border: none;
     z-index: 1000;
   }
@@ -934,13 +932,12 @@ input:checked + .slider:before {
 .overlay-content {
   position: relative;
   top: 100px;
-  max-width: 480px;
   margin: auto;
   padding-bottom: 50px;
   text-align: left;
 }
 .overlay-content label {
-  color: #637074;
+  color: #ffffff;
 }
 
 .overlay a {
@@ -1019,12 +1016,28 @@ input[type=submit]:hover {
 }
 
 @media (min-width: 768px) {
+  .overlay-content {
+    position: relative;
+    top: 100px;
+    max-width: 480px;
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: left;
+  }
   .contact-mobile {
     display: none;
     content: none;
   }
 }
 @media (max-width: 767px) {
+  .overlay-content {
+    position: relative;
+    top: 100px;
+    max-width: 280px;
+    margin: auto;
+    padding-bottom: 50px;
+    text-align: left;
+  }
   .contact-mobile {
     display: flex;
     width: 300px;
@@ -1052,6 +1065,17 @@ input[type=submit]:hover {
     color: #1b292e;
   }
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 :root {
   --primary: #ffde01;
   --dark: #213740;
@@ -1086,9 +1110,7 @@ input[type=submit]:hover {
 }
 
 .row {
-  display: -ms-flexbox; /* IE10 */
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
   padding: 0 4px;
   margin-left: auto;
@@ -1097,7 +1119,6 @@ input[type=submit]:hover {
 
 /* Create four equal columns that sits next to each other */
 .column {
-  -ms-flex: 25%; /* IE10 */
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
@@ -1112,14 +1133,12 @@ input[type=submit]:hover {
 
 @media screen and (max-width: 800px) {
   .column {
-    -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
   }
 }
 @media screen and (max-width: 600px) {
   .column {
-    -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
   }
@@ -1155,7 +1174,7 @@ input[type=submit]:hover {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 9999;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -1189,20 +1208,10 @@ input[type=submit]:hover {
 /* Add Animation */
 .modal-content,
 #modalCaption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
 }
 
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
-}
 @keyframes zoom {
   from {
     transform: scale(0);
@@ -1251,7 +1260,7 @@ input[type=submit]:hover {
 
 .dark-mode .btn {
   background-color: #0d1416;
-  color: #637074;
+  color: #fefdf5;
 }
 
 .dark-mode .btn:hover {
@@ -1355,7 +1364,7 @@ input[type=submit]:hover {
     padding: 20px;
   }
   .row {
-    max-width: 90% x;
+    max-width: 90%;
   }
 }
 :root {
@@ -1937,10 +1946,11 @@ input[type=submit]:hover {
   font-style: normal;
 }
 
+/* Section Formation */
 .formation {
   background-color: rgb(248, 238, 178);
 }
-.formation h2 {
+.formation h3 {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -1950,8 +1960,10 @@ input[type=submit]:hover {
 .dark-mode .formation {
   background-color: #0d1416;
 }
-.dark-mode .formation h2 {
-  color: #637074;
+
+.dark-mode .formation h3 {
+  color: #ffde01 !important;
+  background-color: #0d1416;
 }
 
 .formation-header {
@@ -1971,9 +1983,6 @@ input[type=submit]:hover {
   color: #fefdf5;
   border-radius: 5px;
 }
-.card img {
-  max-height: auto;
-}
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -1989,18 +1998,15 @@ input[type=submit]:hover {
   padding-top: 10px;
 }
 
+/* Media queries */
 @media (min-width: 768px) {
-  .formation {
-    background-color: rgb(248, 238, 178);
-  }
-  .formation h2 {
+  .formation h3 {
     max-width: 1140px;
     padding-top: 50px;
     padding-left: 10px;
     font-size: 1.7em;
   }
   .formation-header {
-    border-radius: 6px;
     max-width: 1140px;
     margin-bottom: 50px;
   }
@@ -2014,10 +2020,7 @@ input[type=submit]:hover {
     margin-top: 10px;
   }
   h4 {
-    font-family: "Comfortaa", sans-serif;
-    font-weight: 400;
     font-size: 1.2em;
-    color: #fefdf5;
     padding-top: 10px;
   }
   p {
@@ -2026,10 +2029,7 @@ input[type=submit]:hover {
   }
 }
 @media (min-width: 414px) and (max-width: 767px) {
-  .formation {
-    background-color: rgb(248, 238, 178);
-  }
-  .formation h2 {
+  .formation h3 {
     display: inline-block;
     width: 90%;
     margin: auto;
@@ -2039,7 +2039,6 @@ input[type=submit]:hover {
     text-align: center;
   }
   .formation-header {
-    border-radius: 6px;
     max-width: 90%;
     margin-bottom: 50px;
     flex-wrap: wrap;
@@ -2054,10 +2053,7 @@ input[type=submit]:hover {
     margin-top: 10px;
   }
   h4 {
-    font-family: "Comfortaa", sans-serif;
-    font-weight: 400;
     font-size: 1.2em;
-    color: #fefdf5;
     padding-top: 15px;
   }
   p {
@@ -2066,16 +2062,12 @@ input[type=submit]:hover {
   }
 }
 @media (max-width: 413px) {
-  .formation {
-    background-color: rgb(248, 238, 178);
-  }
-  .formation h2 {
+  .formation h3 {
     padding-top: 50px;
     padding-left: 10px;
     font-size: 1.7em;
   }
   .formation-header {
-    border-radius: 6px;
     max-width: 90%;
     margin-bottom: 50px;
     flex-wrap: wrap;
@@ -2089,10 +2081,7 @@ input[type=submit]:hover {
     margin-top: 25px;
   }
   h4 {
-    font-family: "Comfortaa", sans-serif;
-    font-weight: 400;
     font-size: 1em;
-    color: #fefdf5;
     padding-top: 15px;
   }
   p {

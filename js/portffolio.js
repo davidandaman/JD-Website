@@ -1,15 +1,15 @@
 // Fonction pour afficher le modal lorsqu'une image est cliquée
 function openModal(imgSrc, imgAlt) {
-  var modal = document.getElementById("myModal");
-  var modalImg = document.getElementById("modalImg");
-  var modalCaption = document.getElementById("modalCaption");
+  let modal = document.getElementById("myModal");
+  let modalImg = document.getElementById("modalImg");
+  let modalCaption = document.getElementById("modalCaption");
 
   modal.style.display = "block";
   modalImg.src = imgSrc;
   modalCaption.innerHTML = imgAlt;
 
   // Attachement du gestionnaire d'événement au bouton de fermeture
-  var closeButton = document.querySelector(".close");
+  let closeButton = document.querySelector(".close");
   closeButton.onclick = function () {
     modal.style.display = "none";
   };
@@ -17,7 +17,7 @@ function openModal(imgSrc, imgAlt) {
 
 // Fermer le modal lorsqu'on clique en dehors de l'image
 window.onclick = function (event) {
-  var modal = document.getElementById("myModal");
+  let modal = document.getElementById("myModal");
   if (event.target == modal) {
     modal.style.display = "none";
   }
@@ -25,7 +25,7 @@ window.onclick = function (event) {
 
 // Fonction pour filtrer les images
 function filterSelection(c) {
-  var x, i;
+  let x, i;
   x = document.getElementsByClassName("column");
   if (c == "all") {
     for (i = 0; i < x.length; i++) {
@@ -42,7 +42,7 @@ function filterSelection(c) {
   }
 
   // Retirer la classe "active" de tous les boutons
-  var btns = document.getElementsByClassName("btn");
+  let btns = document.getElementsByClassName("btn");
   for (i = 0; i < btns.length; i++) {
     btns[i].classList.remove("active");
   }

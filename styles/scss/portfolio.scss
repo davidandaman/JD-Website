@@ -22,9 +22,7 @@
 }
 
 .row {
-  display: -ms-flexbox; /* IE10 */
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
   padding: 0 4px;
   margin-left: auto;
@@ -33,7 +31,6 @@
 
 /* Create four equal columns that sits next to each other */
 .column {
-  -ms-flex: 25%; /* IE10 */
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
@@ -48,7 +45,6 @@
 
 @media screen and (max-width: 800px) {
   .column {
-    -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
   }
@@ -56,7 +52,6 @@
 
 @media screen and (max-width: 600px) {
   .column {
-    -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
   }
@@ -70,7 +65,6 @@
 .btn {
   border: none;
   outline: none;
-
   background-color: $lightdark;
   color: $secondary;
   font-family: "Montserrat", sans-serif;
@@ -94,7 +88,7 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 9999;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -128,19 +122,8 @@
 /* Add Animation */
 .modal-content,
 #modalCaption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
   animation-name: zoom;
   animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
 }
 
 @keyframes zoom {
@@ -194,7 +177,7 @@
 
 .dark-mode .btn {
   background-color: $superdark;
-  color: $darkextralight;
+  color: $superlight;
 }
 
 .dark-mode .btn:hover {
@@ -327,6 +310,6 @@
   }
 
   .row {
-    max-width: 90%x;
+    max-width: 90%;
   }
 }

@@ -11,10 +11,11 @@
   font-style: normal;
 }
 
+/* Section Formation */
 .formation {
   background-color: rgb(248, 238, 178);
 }
-.formation h2 {
+.formation h3 {
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -24,8 +25,10 @@
 .dark-mode .formation {
   background-color: #0d1416;
 }
-.dark-mode .formation h2 {
-  color: #637074;
+
+.dark-mode .formation h3 {
+  color: #ffde01 !important;
+  background-color: #0d1416;
 }
 
 .formation-header {
@@ -45,9 +48,6 @@
   color: #fefdf5;
   border-radius: 5px;
 }
-.card img {
-  max-height: auto;
-}
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -63,18 +63,15 @@
   padding-top: 10px;
 }
 
+/* Media queries */
 @media (min-width: 768px) {
-  .formation {
-    background-color: rgb(248, 238, 178);
-  }
-  .formation h2 {
+  .formation h3 {
     max-width: 1140px;
     padding-top: 50px;
     padding-left: 10px;
     font-size: 1.7em;
   }
   .formation-header {
-    border-radius: 6px;
     max-width: 1140px;
     margin-bottom: 50px;
   }
@@ -88,10 +85,7 @@
     margin-top: 10px;
   }
   h4 {
-    font-family: "Comfortaa", sans-serif;
-    font-weight: 400;
     font-size: 1.2em;
-    color: #fefdf5;
     padding-top: 10px;
   }
   p {
@@ -100,10 +94,7 @@
   }
 }
 @media (min-width: 414px) and (max-width: 767px) {
-  .formation {
-    background-color: rgb(248, 238, 178);
-  }
-  .formation h2 {
+  .formation h3 {
     display: inline-block;
     width: 90%;
     margin: auto;
@@ -113,7 +104,6 @@
     text-align: center;
   }
   .formation-header {
-    border-radius: 6px;
     max-width: 90%;
     margin-bottom: 50px;
     flex-wrap: wrap;
@@ -128,10 +118,7 @@
     margin-top: 10px;
   }
   h4 {
-    font-family: "Comfortaa", sans-serif;
-    font-weight: 400;
     font-size: 1.2em;
-    color: #fefdf5;
     padding-top: 15px;
   }
   p {
@@ -140,16 +127,12 @@
   }
 }
 @media (max-width: 413px) {
-  .formation {
-    background-color: rgb(248, 238, 178);
-  }
-  .formation h2 {
+  .formation h3 {
     padding-top: 50px;
     padding-left: 10px;
     font-size: 1.7em;
   }
   .formation-header {
-    border-radius: 6px;
     max-width: 90%;
     margin-bottom: 50px;
     flex-wrap: wrap;
@@ -163,10 +146,7 @@
     margin-top: 25px;
   }
   h4 {
-    font-family: "Comfortaa", sans-serif;
-    font-weight: 400;
     font-size: 1em;
-    color: #fefdf5;
     padding-top: 15px;
   }
   p {

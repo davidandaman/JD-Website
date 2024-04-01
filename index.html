@@ -2,13 +2,21 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JULIEN David - Créateur et Développeur Frontend</title>
     <meta
       name="description"
-      content="David JULIEN création de projets web, dévellopement Frontend"
+      content="David JULIEN propose création projets & sites web, développement Frontend, Drupal, JavaScript, React, conception graphique, référencement SEO. Contactez-nous pour solutions web sur mesure & efficaces"
     />
-    <link rel="stylesheet" href="./styles/scss/styles.css" />
+
+    <link rel="stylesheet" href="./styles/scss/variables_min.css" />
+    <link rel="stylesheet" href="./styles/scss/layout.css" />
+    <link rel="stylesheet" href="./styles/scss/portfolio_min.css" />
+    <link rel="stylesheet" href="./styles/scss/skills_min.css" />
+    <link rel="stylesheet" href="./styles/scss/formations_min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,21 +29,62 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <!-- Fichiers JS-->
     <script src="/js/dark-light.js"></script>
-    <script src="/js/toggle.js"></script>  
-    <script src="/js/skills-bar.js"></script>
-    <script src="/js/portffolio.js"></script>
-    <script src="/js/contact.js"></script>
+    <script src="/js/toggle-min.js"></script>
+    <script src="/js/skills-bar-min.js"></script>
+    <script src="/js/portffolio-min.js"></script>
+    <script src="/js/contact-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "David Julien",
+        "image": "https://www.julien-david.com/images/photo_jd.png",
+        "@id": "",
+        "url": "https://www.julien-david.com/images/photo_jd.png",
+        "telephone": "+33 6 61 59 35 65",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Place Jeanne Hachette",
+          "addressLocality": "Beauvais",
+          "postalCode": "60000",
+          "addressCountry": "FR"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "06:00",
+          "closes": "16:00"
+        }
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DNGZC4TGE1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DNGZC4TGE1");
+    </script>
   </head>
   <body class="loading">
     <button onclick="topFunction()" id="myBtn" title="Go to top">
-      <span class="material-symbols-outlined">
-        keyboard_control_key
-      </span>
+      <span class="material-symbols-outlined"> keyboard_control_key </span>
     </button>
     <div class="header dark-mode-header">
       <div id="triangle-langue">
@@ -55,51 +104,88 @@
             <li><a href="#section-competences">Compétences</a></li>
             <li><a href="#">Ingénierie pédagogique</a></li>
             <li><a href="#section-portfolio">Portfolio</a></li>
-            <li><a style="cursor:pointer" onclick="openNavForm()">Contact</a> </li>
-          </ul> 
+            <li>
+              <a style="cursor: pointer" onclick="openNavForm()">Contact</a>
+            </li>
+          </ul>
           <div id="myNav" class="overlay">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNavForm()">&times;</a>
-  <!-- Overlay content -->
-    <div class="overlay-content">
-      <form action="envoyer_email.php" method="post">
-        <label for="fname">Prénom</label>
-        <input type="text" id="fname" name="firstname" placeholder="Votre prénom.." required>
-        <label for="lname">Nom</label>
-        <input type="text" id="lname" name="lastname" placeholder="Votre nom.." required>
-  
-        <label for="lemail">Enter your email:</label>
-        <input type="email" id="lemail" name="email" placeholder="Votre email.."required>
+            <a
+              href="javascript:void(0)"
+              class="closebtn"
+              onclick="closeNavForm()"
+              >&times;</a
+            >
+            <!-- Overlay content -->
+            <div class="overlay-content">
+              <form action="envoyer_email.php" method="post">
+                <label for="fname">Prénom</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Votre prénom.."
+                  required
+                />
+                <label for="lname">Nom</label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Votre nom.."
+                  required
+                />
 
-        <label for="country">Pays</label>
-        <select id="country" name="country">
-          <option value="france">France</option>
-          <option value="canada">Canada</option>
-          <option value="suisse">Suisse</option>
-          <option value="belgique">Belgique</option>
-          <option value="autre">Autre</option>
-        </select>
-        <label for="subject">Objet</label>
-        <textarea id="subject" name="subject" placeholder="Votre message.." style="height:200px" required> </textarea>
-        <input type="submit" value="Envoyer">
-      </form>
-    </div>
-  </div>
+                <label for="lemail">Enter your email:</label>
+                <input
+                  type="email"
+                  id="lemail"
+                  name="email"
+                  placeholder="Votre email.."
+                  required
+                />
+
+                <label for="country">Pays</label>
+                <select id="country" name="country">
+                  <option value="france">France</option>
+                  <option value="canada">Canada</option>
+                  <option value="suisse">Suisse</option>
+                  <option value="belgique">Belgique</option>
+                  <option value="autre">Autre</option>
+                </select>
+                <label for="subject">Objet</label>
+                <textarea
+                  id="subject"
+                  name="subject"
+                  placeholder="Votre message.."
+                  style="height: 200px"
+                  required
+                >
+                </textarea>
+                <input type="submit" value="Envoyer" />
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="bottom-header">
-      <label class="switch">
-        <input type="checkbox" onclick="darkLight()" />
+      <label class="switch" for="toggleSwitch">
+        <span class="visually-hidden">Dark Mode</span>
+        <input type="checkbox" id="toggleSwitch" onclick="darkLight()" />
         <span class="slider round"></span>
       </label>
       <div class="nav-mobile">
         <div id="mySidepanel" class="sidepanel">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >×</a
+          >
           <a href="#section-competences">Compétences</a>
           <a href="#">Conception pédagogique</a>
           <a href="#section-portfolio">Portfolio</a>
         </div>
-        <button class="openbtn" onclick="openNav()">☰</button>  
+        <button class="openbtn" onclick="openNav()">
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
       </div>
     </div>
     <div class="main">
@@ -352,7 +438,7 @@
     </section>
     <!-- SKILLS BAR -->
     <section class="skills-bar" id="section-competences">
-      <section class="skill-bar">
+      <div class="skill-bar">
         <div class="wrap">
           <div class="bar">
             <h3>
@@ -360,209 +446,346 @@
             </h3>
             <div class="thumb"><span></span></div>
           </div>
+
           <div class="bar">
             <h3>
               CSS3<abbr><span>85%</span></abbr>
             </h3>
             <div class="thumb"><span></span></div>
           </div>
+
           <div class="bar">
             <h3>
               JAVASCRIPT<abbr><span>60%</span></abbr>
             </h3>
             <div class="thumb"><span></span></div>
           </div>
+
           <div class="bar">
             <h3>
               REACT<abbr><span>80%</span></abbr>
             </h3>
             <div class="thumb"><span></span></div>
           </div>
-            <div class="bar">
-              <h3>
-                DRUPAL<abbr><span>90%</span></abbr>
-              </h3>
-              <div class="thumb"><span></span></div>
-            </div>
-              <div class="bar">
-                <h3>
-                  FIGMA<abbr><span>70%</span></abbr>
-                </h3>
-                <div class="thumb"><span></span></div>
-              </div>
-              <div class="bar">
-                <h3>
-                  ADOBE PHOTOSHOP<abbr><span>85%</span></abbr>
-                </h3>
-                <div class="thumb"><span></span></div>
-              </div>
-              <div class="bar">
-                <h3>
-                  ADOBE ILLUSTRATOR<abbr><span>90%</span></abbr>
-                </h3>
-                <div class="thumb"><span></span></div>
-              </div>
+
+          <div class="bar">
+            <h3>
+              DRUPAL<abbr><span>90%</span></abbr>
+            </h3>
+            <div class="thumb"><span></span></div>
+          </div>
+
+          <div class="bar">
+            <h3>
+              FIGMA<abbr><span>70%</span></abbr>
+            </h3>
+            <div class="thumb"><span></span></div>
+          </div>
+
+          <div class="bar">
+            <h3>
+              ADOBE PHOTOSHOP<abbr><span>85%</span></abbr>
+            </h3>
+            <div class="thumb"><span></span></div>
+          </div>
+
+          <div class="bar">
+            <h3>
+              ADOBE ILLUSTRATOR<abbr><span>90%</span></abbr>
+            </h3>
+            <div class="thumb"><span></span></div>
           </div>
         </div>
-      </section>
+      </div>
     </section>
 
-   <!-- PORTFOLIO -->
+    <!-- PORTFOLIO -->
     <section class="portfolio" id="section-portfolio">
       <h2>mon portfolio...</h2>
       <div class="portfolio-header">
- 
-          <!-- Filter Buttons -->
-          <div class="btn-container">
-            <button class="btn active" onclick="filterSelection('all')">tous</button>
-            <button class="btn" onclick="filterSelection('web')">web</button>
-            <button class="btn" onclick="filterSelection('design')">design</button>
-            <button class="btn" onclick="filterSelection('print')">print</button>
-          </div>
-      
-          <!-- Photo Grid -->
-          <div class="row">
-            <div class="column web">
-              <img
-                src="/images/portfolio/11folio.jpg"
-                alt="Web 1"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/11folio.jpg', 'Web 1')"
-              />
-              <!-- Ajout de l'attribut onclick pour ouvrir le modal avec la bonne image -->
-              <img
-                src="/images/portfolio/12folio.jpg"
-                alt="Web 2"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/12folio.jpg', 'Web 2')"
-              />
-              <img
-                src="/images/portfolio/14folio.png"
-                alt="Web 3"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/14folio.png', 'Web 3')"
-              />
-              <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
-            </div>
-            <div class="column design">
-              <img
-                src="/images/portfolio/15folio.png"
-                alt="Design 1"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/15folio.png', 'Design 1')"
-              />
-              <img
-                src="/images/portfolio/2folio.png"
-                alt="Design 2"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/2folio.png', 'Design 2')"
-              />
-              <img
-                src="/images/portfolio/5folio.png"
-                alt="Design 3"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/5folio.png', 'Design 3')"
-              />
-              <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
-            </div>
-            <div class="column print">
-              <img
-                src="/images/portfolio/experatec_logo_0.png"
-                alt="Print 1"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/experatec_logo_0.png', 'Print 1')"
-              />
-              <img
-                src="/images/portfolio/flyer_sophrologie.jpg"
-                alt="Print 2"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/flyer_sophrologie.jpg', 'Print 2')"
-              />
-              <img
-                src="/images/portfolio/foliologo.png"
-                alt="Print 3"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/foliologo.png', 'Print 3')"
-              />
-              <!-- Ajoutez d'autres images avec leurs attributs onclick ici -->
-            </div>
-            <div class="column design">
-              <img
-                src="/images/portfolio/scene_autilink1.jpg"
-                alt="Design 4"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/scene_autilink1.jpg', 'Design 4')"
-              />
-              <img
-                src="/images/portfolio/view_portfolio_0.jpg"
-                alt="Design 5"
-                style="width: 100%"
-                onclick="openModal('/images/portfolio/view_portfolio_0.jpg', 'Design 5')"
-              />
-            </div>
-          </div>
-      
-          <!-- Modal -->
-          <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="modalImg" />
-            <div id="modalCaption"></div>
-          </div>
-        </div>
-        </section>
-
-        <section class="formation">
-          <h2>mes formations...</h2>
-          <div class="formation-header">
-
-   
-            <div class="card">
-              <img src="/images/formationprint.png" alt="imprimeur" style="width:100%">
-              <div class="container">
-                <h4>Imprimeur conducteur offset</h4> 
-                <p>CFA de l'imprimerie</p> 
-              </div>
-            </div>
-
-
-      
-            <div class="card">
-              <img src="/images/formationmultimedia.png" alt="concepteur multimédia" style="width:100%">
-              <div class="container">
-                <h4>Concepteur Multimedia</h4> 
-                <p>Média management</p> 
-              </div>
-            </div>
-  
-      
-
-
-          <div class="card">
-          <img src="images/formationpedagogy.png" alt="ingénieur pédagogique" style="width:100%">
-            <div class="container">
-              <h4>Ingénieur pédagogique</h4> 
-              <p>Openclassroom</p> 
-            </div>
-          </div>
-       
-
-          <div class="card">
-            <img src="images/formationcodeur.png" alt="développeur front-end" style="width:100%">
-              <div class="container">
-                <h4>Développeur<br>Front-end</h4> 
-                <p>Openclassroom</p> 
-              </div>
-            </div>
-   
-
-          </div>
-        </section>
-
-        <div class="contact-mobile">
-          <span style="cursor:pointer" onclick="openNavForm()">Contact</span>
+        <!-- Filter Buttons -->
+        <div class="btn-container">
+          <button class="btn active" onclick="filterSelection('all')">
+            tous
+          </button>
+          <button class="btn" onclick="filterSelection('web')">web</button>
+          <button class="btn" onclick="filterSelection('design')">
+            design
+          </button>
+          <button class="btn" onclick="filterSelection('print')">print</button>
         </div>
 
-    <div class="footer">© 2024 Tous droits réservés à David JULIEN  </div>
-    <script src="/js/on-top.js"></script>
+        <!-- Photo Grid -->
+        <div class="row">
+          <div class="column web">
+            <img
+              src="/images/portfolio/web/ohmyfood1.jpg"
+              alt="HTML - CSS Ohmyfood"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/ohmyfood1.jpg', 'HTML - CSS Ohmyfood')"
+            />
+            <img
+              src="/images/portfolio/web/ohmyfood2.jpg"
+              alt="HTML - CSS Ohmyfood Mobile"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/ohmyfood2.jpg', 'HTML - CSS Ohmyfood Mobile')"
+            />
+            <img
+              src="/images/portfolio/web/booki.jpg"
+              alt="HTML - CSS Booki"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/booki.jpg', 'HTML - CSS Booki')"
+            />
+            <img
+              src="/images/portfolio/web/kaza1.jpg"
+              alt="App React KAZA"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/kaza1.jpg', 'App React KAZA')"
+            />
+            <img
+              src="/images/portfolio/web/kaza2.jpg"
+              alt="App React KAZA mobile"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/kaza2.jpg', 'App React KAZA mobile')"
+            />
+            <img
+              src="/images/portfolio/web/ninacarducci1.jpg"
+              alt="Optimisation SEO"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/ninacarducci1.jpg', 'Optimisation SEO')"
+            />
+            <img
+              src="/images/portfolio/web/ninacarducci2.jpg"
+              alt="Optimisation SEO mobile"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/ninacarducci2.jpg', 'Optimisation SEO mobile')"
+            />
+            <img
+              src="/images/portfolio/web/monjardinconnecte_interface_fiche.jpg"
+              alt="site DRUPAL"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/monjardinconnecte_interface_fiche.jpg', 'site DRUPAL')"
+            />
+          </div>
+          <div class="column design">
+            <img
+              src="/images/portfolio/5folio.png"
+              alt="Logo i-RestO"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/5folio.png', 'Logo i-RestO')"
+            />
+            <img
+              src="/images/portfolio/14folio.png"
+              alt="Logo WALLC"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/14folio.png', 'Logo WALLC')"
+            />
+            <img
+              src="/images/portfolio/6folio.jpg"
+              alt="Design vectoriel innoPro - Zanclus"
+              style="width: 100%"
+              onclick="openModal('/images/portfoli/6folio.jpg', 'Design vectoriel innoPro - Zanclus')"
+            />
+            <img
+              src="/images/portfolio/9folio.jpg"
+              alt="Design vectoriel innoPro - Empereur"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/9folio.jpg', 'Design vectoriel innoPro - Empereur ')"
+            />
+            <img
+              src="/images/portfolio/7folio.jpg"
+              alt="Design vectoriel innoPro"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/7folio.jpg', 'Design vectoriel innoPro')"
+            />
+            <img
+              src="/images/portfolio/scene_usb_suisse.jpg"
+              alt="Design vectoriel - pour le fun"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/scene_usb_suisse.jpg', 'Design vectoriel - pour le fun')"
+            />
+            <img
+              src="/images/portfolio/8folio.jpg"
+              alt="Design vectoriel TukTuk - pour le fun"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/8folio.jpg', 'Design vectoriel TukTuk - pour le fun')"
+            />
+          </div>
+          <div class="column print">
+            <img
+              src="/images/portfolio/15folio.png"
+              alt="Etiquette"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/15folio.png', 'Etiquette')"
+            />
+            <img
+              src="/images/portfolio/2folio.png"
+              alt="Cartes commerciales"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/2folio.png', 'Cartes commerciales')"
+            />
+
+            <img
+              src="/images/portfolio/miko_projet_packaging.jpg"
+              alt="Packaging"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/miko_projet_packaging.jpg', 'Packaging')"
+            />
+            <img
+              src="/images/portfolio/experatec_logo_0.png"
+              alt="Logo et charte graphique"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/experatec_logo_0.png', 'Logo et charte graphique')"
+            />
+            <img
+              src="/images/portfolio/11folio.jpg"
+              alt="Logo et Print"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/11folio.jpg', 'Logo et Print')"
+            />
+            <img
+              src="/images/portfolio/flyer_sophrologie.jpg"
+              alt="Flyer"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/flyer_sophrologie.jpg', 'Flyer')"
+            />
+            <img
+              src="/images/portfolio/foliologo.png"
+              alt="Logo laboratoire"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/foliologo.png', 'Logo laboratoire')"
+            />
+            <img
+              src="/images/portfolio/flyer_iresto.jpg"
+              alt="Flyer 3 volets iRestO"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/flyer_iresto.jpg', 'Flyer 3 volets iRestO')"
+            />
+          </div>
+          <div class="column web">
+            <img
+              src="/images/portfolio/scene_autilink1.jpg"
+              alt="Site web pour autistes"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/scene_autilink1.jpg', 'Site web pour autistes')"
+            />
+            <img
+              src="/images/portfolio/view_portfolio_0.jpg"
+              alt="Site web pour restaurants"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/view_portfolio_0.jpg', 'Site web pour restaurants')"
+            />
+            <img
+              src="/images/portfolio/web/argentbank1.jpg"
+              alt="Application bancaire"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/argentbank1.jpg', 'Application bancaire')"
+            />
+            <img
+              src="/images/portfolio/web/argentbank2.jpg"
+              alt="App React ArgentBank"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/argentbank2.jpg', 'App React ArgentBank')"
+            />
+            <img
+              src="/images/portfolio/web/argentbank3.jpg"
+              alt="App React - Connexion utilisateur"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/argentbank3.jpg', 'App React - Connexion utilisateur')"
+            />
+            <img
+              src="/images/portfolio/web/lemondesurmesure1.jpg"
+              alt="'Site Drupal Agence de voyage"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/lemondesurmesure1.jpg', 'Site Drupal Agence de voyage')"
+            />
+            <img
+              src="/images/portfolio/web/lemondesurmesure2.jpg"
+              alt="Création de A à Z"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/lemondesurmesure2.jpg', 'Création de A à Z')"
+            />
+            <img
+              src="/images/portfolio/web/lemondesurmesure3.jpg"
+              alt="Desin et développement"
+              style="width: 100%"
+              onclick="openModal('/images/portfolio/web/lemondesurmesure3.jpg', 'Desin et développement')"
+            />
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img
+            class="modal-content"
+            id="modalImg"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            alt="Image dans la modal"
+          />
+          <div id="modalCaption"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="formation">
+      <h3>mes formations...</h3>
+      <div class="formation-header">
+        <div class="card">
+          <img
+            src="/images/formationprint.png"
+            alt="imprimeur"
+            style="width: 100%"
+          />
+          <div class="container">
+            <h4>Imprimeur conducteur offset</h4>
+            <p>CFA de l'imprimerie</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="/images/formationmultimedia.png"
+            alt="concepteur multimédia"
+            style="width: 100%"
+          />
+          <div class="container">
+            <h4>Concepteur Multimedia</h4>
+            <p>Média management</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="images/formationpedagogy.png"
+            alt="ingénieur pédagogique"
+            style="width: 100%"
+          />
+          <div class="container">
+            <h4>Ingénieur pédagogique</h4>
+            <p>Openclassroom</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="images/formationcodeur.png"
+            alt="développeur front-end"
+            style="width: 100%"
+          />
+          <div class="container">
+            <h4>Développeur<br />Front-end</h4>
+            <p>Openclassroom</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="contact-mobile">
+      <span style="cursor: pointer" onclick="openNavForm()">Contact</span>
+    </div>
+
+    <div class="footer">© 2024 Tous droits réservés à David JULIEN</div>
+    <script src="/js/on-top-min.js"></script>
   </body>
 </html>
