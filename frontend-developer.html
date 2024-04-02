@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow" />
@@ -8,7 +8,7 @@
     <title>JULIEN David - Créateur et Développeur Frontend</title>
     <meta
       name="description"
-      content="David JULIEN propose création projets & sites web, développement Frontend, Drupal, JavaScript, React, conception graphique, référencement SEO. Contactez-nous pour solutions web sur mesure & efficaces"
+      content="David JULIEN offers web project & site creation, Frontend development, Drupal, JavaScript, React, graphic design, SEO. Contact us for tailored & effective web solutions."
     />
     <link rel="stylesheet" href="./styles/scss/styles-min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,7 +80,7 @@
     </button>
     <div class="header dark-mode-header">
       <div id="triangle-langue">
-        <div class="langue"><a href="frontend-developer.html">en</a></div>
+        <div class="langue"><a href="index.html">fr</a></div>
       </div>
       <div class="top-header">
         <div class="logotext">
@@ -93,8 +93,8 @@
         </div>
         <div class="navigation dark-mode-navigation">
           <ul class="menu">
-            <li><a href="#section-competences">Compétences</a></li>
-            <li><a href="#">Ingénierie pédagogique</a></li>
+            <li><a href="#section-competences">Skills</a></li>
+            <li><a href="#">Pedagogical engineering</a></li>
             <li><a href="#section-portfolio">Portfolio</a></li>
             <li>
               <a style="cursor: pointer" onclick="openNavForm()">Contact</a>
@@ -110,48 +110,47 @@
             <!-- Overlay content -->
             <div class="overlay-content">
               <form action="envoyer_email.php" method="post">
-                <label for="fname">Prénom</label>
+                <label for="fname">Name</label>
                 <input
                   type="text"
                   id="fname"
                   name="firstname"
-                  placeholder="Votre prénom.."
+                  placeholder="Firstname.."
                   required
                 />
-                <label for="lname">Nom</label>
+                <label for="lname">Lastname</label>
                 <input
                   type="text"
                   id="lname"
                   name="lastname"
-                  placeholder="Votre nom.."
+                  placeholder="Your lastname.."
                   required
                 />
-                <label for="lemail">Votre email :</label>
+                <label for="lemail">VYour email</label>
                 <input
                   type="email"
                   id="lemail"
                   name="email"
-                  placeholder="Votre email.."
+                  placeholder="Your email.."
                   required
                 />
-                <label for="country">Pays</label>
+                <label for="country">Coutry</label>
                 <select id="country" name="country">
-                  <option value="france">France</option>
                   <option value="canada">Canada</option>
-                  <option value="suisse">Suisse</option>
-                  <option value="belgique">Belgique</option>
-                  <option value="autre">Autre</option>
+                  <option value="uk">UK</option>
+                  <option value="us">USA</option>
+                  <option value="other">Other</option>
                 </select>
-                <label for="subject">Objet</label>
+                <label for="subject">Subject</label>
                 <textarea
                   id="subject"
                   name="subject"
-                  placeholder="Votre message.."
+                  placeholder="Your message.."
                   style="height: 200px"
                   required
                 >
                 </textarea>
-                <input type="submit" value="Envoyer" />
+                <input type="submit" value="Submit" />
               </form>
             </div>
           </div>
@@ -169,8 +168,8 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
             >×</a
           >
-          <a href="#section-competences">Compétences</a>
-          <a href="#">Conception pédagogique</a>
+          <a href="#section-competences">Skills</a>
+          <a href="#">Pedagogical engineering</a>
           <a href="#section-portfolio">Portfolio</a>
         </div>
         <button class="openbtn" onclick="openNav()">
@@ -184,27 +183,24 @@
           <img src="../images/photo_jd.png" alt="Julien David" />
         </div>
         <div class="txt-intro">
-          <h1>Designer-Développeur front-end</h1>
+          <h1>Front-end Designer-Developer</h1>
           <p>
-            Freelance spécialisé dans la création de sites internet, je vous
-            propose des solutions sur mesure pour répondre à vos besoins en
-            ligne. Avec mon expertise, je crée des sites esthétiques, intuitifs
-            et optimisés pour les moteurs de recherche. Mon approche
-            personnalisée garantit que chaque projet est unique et aligné avec
-            vos objectifs. Je m'engage à comprendre votre identité de marque
-            pour créer une présence en ligne qui vous représente véritablement.
-            En plus de la conception et du développement de sites web, je
-            propose des services de référencement (SEO) pour augmenter votre
-            visibilité en ligne. Parcourez mon portfolio pour découvrir mes
-            projets précédents et contactez-moi pour discuter de votre projet.
-            Ensemble, nous pouvons créer un site internet exceptionnel qui vous
-            démarquera de la concurrence.
+            Freelancing specialized in crafting bespoke websites, I offer
+            tailored solutions to meet your online needs. With my expertise, I
+            create aesthetic, intuitive, and SEO-optimized sites. Each project
+            reflects your unique goals through personalized approach. I'm
+            committed to understanding your brand identity to craft a truly
+            representative online presence. Alongside website design and
+            development, I provide SEO services to enhance your online
+            visibility. Explore my portfolio to see previous projects and reach
+            out to discuss yours. Together, we can create an outstanding website
+            that sets you apart from the competition.
           </p>
         </div>
       </section>
     </div>
     <section class="skills-section">
-      <h2>Je travaille avec...</h2>
+      <h2>I work with...</h2>
       <div class="skills-tab">
         <div class="skills-row-A">
           <!-- skill 1 HTML-->
@@ -218,7 +214,7 @@
               </div>
               <div class="flip-box-back">
                 <div class="flip-content">
-                  <p>La base pour faire de jolis sites vitrines</p>
+                  <p>The foundation for creating beautiful showcase websites</p>
                 </div>
               </div>
             </div>
@@ -234,7 +230,7 @@
               </div>
               <div class="flip-box-back">
                 <div class="flip-content">
-                  <p>Éléments visuels avancés pour votre site web</p>
+                  <p>Advanced visual elements for your website</p>
                 </div>
               </div>
             </div>
@@ -251,7 +247,7 @@
               <div class="flip-box-back">
                 <div class="flip-content">
                   <p>
-                    Gestion de contenu flexible pour votre site professionnel
+                    Flexible content management for your professional website
                   </p>
                 </div>
               </div>
@@ -269,8 +265,7 @@
               <div class="flip-box-back">
                 <div class="flip-content">
                   <p>
-                    Des sites web interactifs et dynamiques pour captiver votre
-                    audience
+                    Interactive and dynamic websites to captivate your audience
                   </p>
                 </div>
               </div>
@@ -288,8 +283,8 @@
               <div class="flip-box-back">
                 <div class="flip-content">
                   <p>
-                    des applications web modernes et performantes pour une
-                    expérience utilisateur exceptionnelle
+                    Modern and high-performance web applications for an
+                    exceptional user experience
                   </p>
                 </div>
               </div>
@@ -307,8 +302,8 @@
               <div class="flip-box-back">
                 <div class="flip-content">
                   <p>
-                    Gestion efficace de l'état de votre application web pour une
-                    expérience utilisateur fluide et cohérente
+                    Efficient state management of your web application for a
+                    smooth and consistent user experience
                   </p>
                 </div>
               </div>
@@ -327,7 +322,7 @@
               </div>
               <div class="flip-box-back">
                 <div class="flip-content">
-                  <p>Conception intuitive d'interfaces web dynamiques</p>
+                  <p>Intuitive design of dynamic web interfaces</p>
                 </div>
               </div>
             </div>
@@ -343,7 +338,7 @@
               </div>
               <div class="flip-box-back">
                 <div class="flip-content">
-                  <p>Création visuelle experte pour le web et le graphisme</p>
+                  <p>Expert visual creation for the web and graphic design</p>
                 </div>
               </div>
             </div>
@@ -362,9 +357,7 @@
               </div>
               <div class="flip-box-back">
                 <div class="flip-content">
-                  <p>
-                    Illustrations professionnelles pour des designs impeccables
-                  </p>
+                  <p>Professional illustrations for impeccable designs</p>
                 </div>
               </div>
             </div>
@@ -380,7 +373,7 @@
               </div>
               <div class="flip-box-back">
                 <div class="flip-content">
-                  <p>Tests API simplifiés pour un développement efficace</p>
+                  <p>Simplified API testing for efficient development</p>
                 </div>
               </div>
             </div>
@@ -397,8 +390,8 @@
               <div class="flip-box-back">
                 <div class="flip-content">
                   <p>
-                    Documentation API claire et intuitive pour une meilleure
-                    compréhension
+                    Clear and intuitive API documentation for better
+                    understanding
                   </p>
                 </div>
               </div>
@@ -416,8 +409,7 @@
               <div class="flip-box-back">
                 <div class="flip-content">
                   <p>
-                    Analyse approfondie des performances pour une expérience
-                    utilisateur optimisée
+                    In-depth performance analysis for optimized user experience
                   </p>
                 </div>
               </div>
@@ -491,12 +483,12 @@
 
     <!-- PORTFOLIO -->
     <section class="portfolio" id="section-portfolio">
-      <h2>mon portfolio...</h2>
+      <h2>My portfolio...</h2>
       <div class="portfolio-header">
         <!-- Filter Buttons -->
         <div class="btn-container">
           <button class="btn active" onclick="filterSelection('all')">
-            tous
+            all
           </button>
           <button class="btn" onclick="filterSelection('web')">web</button>
           <button class="btn" onclick="filterSelection('design')">
@@ -512,37 +504,37 @@
               src="/images/portfolio/web/ohmyfood1.jpg"
               alt="HTML - CSS Ohmyfood"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/ohmyfood1.jpg', 'Interface réalisé avec HTML et CSS : www.ohmyfood.pacificgraphic.com')"
+              onclick="openModal('/images/portfolio/web/ohmyfood1.jpg', 'Interface created with HTML and CSS: www.ohmyfood.pacificgraphic.com')"
             />
             <img
               src="/images/portfolio/web/ohmyfood2.jpg"
               alt="HTML - CSS Ohmyfood Mobile"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/ohmyfood2.jpg', 'Interface réalisé avec HTML et CSS : www.ohmyfood.pacificgraphic.com')"
+              onclick="openModal('/images/portfolio/web/ohmyfood2.jpg', 'Interface created with HTML and CSS: www.ohmyfood.pacificgraphic.com')"
             />
             <img
               src="/images/portfolio/web/booki.jpg"
               alt="HTML - CSS Booki"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/booki.jpg', 'Interface Responsive HTML et CSS : booki.julien-david.com')"
+              onclick="openModal('/images/portfolio/web/booki.jpg', 'Responsive interface using HTML and CSS: booki.julien-david.com')"
             />
             <img
               src="/images/portfolio/web/kaza1.jpg"
               alt="App React KAZA"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/kaza1.jpg', 'Application web réalisée avec React JS pour une agence immobilière : www.github.com/davidandaman/Kasa')"
+              onclick="openModal('/images/portfolio/web/kaza1.jpg', 'Web application built with React JS for a real estate agency: www.github.com/davidandaman/Kasa')"
             />
             <img
               src="/images/portfolio/web/kaza2.jpg"
               alt="App React KAZA mobile"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/kaza2.jpg', 'Application web réalisée avec React JS pour une agence immobilière : www.github.com/davidandaman/Kasa')"
+              onclick="openModal('/images/portfolio/web/kaza2.jpg', 'Web application built with React JS for a real estate agency: www.github.com/davidandaman/Kasa')"
             />
             <img
               src="/images/portfolio/web/ninacarducci2.jpg"
               alt="Optimisation SEO mobile"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/ninacarducci2.jpg', 'Optimisation référencement pour un site de photographe : www.davidandaman.github.io/ninacarducci')"
+              onclick="openModal('/images/portfolio/web/ninacarducci2.jpg', 'SEO optimization for a photographer s website: www.davidandaman.github.io/ninacarducci')"
             />
             <img
               src="/images/portfolio/web/printit.jpg"
@@ -669,39 +661,39 @@
               src="/images/portfolio/web/argentbank1.jpg"
               alt="Application bancaire"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/argentbank1.jpg', 'Application React/ Redux, partie front-end avec login de connexion : www.davidandaman/projet-argentbank')"
+              onclick="openModal('/images/portfolio/web/argentbank1.jpg', 'React/Redux application, front-end with login authentication: www.davidandaman/projet-argentbank')"
             />
             <img
               src="/images/portfolio/web/argentbank2.jpg"
               alt="App React ArgentBank"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/argentbank2.jpg', 'Application React/ Redux, partie front-end avec login de connexion : www.davidandaman/projet-argentbank')"
+              onclick="openModal('/images/portfolio/web/argentbank2.jpg', 'React/Redux application, front-end with login authentication: www.davidandaman/projet-argentbank')"
             />
             <img
               src="/images/portfolio/web/argentbank3.jpg"
               alt="App React - Connexion utilisateur"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/argentbank3.jpg', 'Application React/ Redux, partie front-end avec login de connexion : www.davidandaman/projet-argentbank')"
+              onclick="openModal('/images/portfolio/web/argentbank3.jpg', 'React/Redux application, front-end with login authentication: www.davidandaman/projet-argentbank')"
             />
 
             <img
               src="/images/portfolio/web/lemondesurmesure1.jpg"
               alt="'Site Drupal Agence de voyage"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/lemondesurmesure1.jpg', 'Site pour une agence de voyage, réalisé avec le CMS Drupal : www.lemondesurmesure.fr')"
+              onclick="openModal('/images/portfolio/web/lemondesurmesure1.jpg', 'Travel agency website built with the Drupal CMS: www.lemondesurmesure.fr')"
             />
 
             <img
               src="/images/portfolio/web/lemondesurmesure2.jpg"
               alt="Création de A à Z"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/lemondesurmesure2.jpg', 'Site pour une agence de voyage, réalisé avec le CMS Drupal : www.lemondesurmesure.fr')"
+              onclick="openModal('/images/portfolio/web/lemondesurmesure2.jpg', 'Travel agency website built with the Drupal CMS: www.lemondesurmesure.fr')"
             />
             <img
               src="/images/portfolio/web/lemondesurmesure3.jpg"
               alt="Desin et développement"
               style="width: 100%"
-              onclick="openModal('/images/portfolio/web/lemondesurmesure3.jpg', 'Site pour une agence de voyage, réalisé avec le CMS Drupal : www.lemondesurmesure.fr', )"
+              onclick="openModal('/images/portfolio/web/lemondesurmesure3.jpg', 'Travel agency website built with the Drupal CMS: www.lemondesurmesure.fr', )"
             />
           </div>
         </div>
@@ -719,49 +711,49 @@
       </div>
     </section>
     <section class="formation">
-      <h3>mes formations...</h3>
+      <h3>My training...</h3>
       <div class="formation-header">
         <div class="card">
           <img
             src="/images/formationprint.png"
-            alt="imprimeur"
+            alt="Printer operator"
             style="width: 100%"
           />
           <div class="container">
-            <h4>Imprimeur conducteur offset</h4>
-            <p>CFA de l'imprimerie</p>
+            <h4>Offset printer operator</h4>
+            <p>Printing school</p>
           </div>
         </div>
         <div class="card">
           <img
             src="/images/formationmultimedia.png"
-            alt="concepteur multimédia"
+            alt="Multimedia Designer"
             style="width: 100%"
           />
           <div class="container">
-            <h4>Concepteur Multimedia</h4>
+            <h4>Multimedia Designer</h4>
             <p>Média management</p>
           </div>
         </div>
         <div class="card">
           <img
             src="images/formationpedagogy.png"
-            alt="ingénieur pédagogique"
+            alt="Pedagogical Engineer"
             style="width: 100%"
           />
           <div class="container">
-            <h4>Ingénieur pédagogique</h4>
+            <h4>Pedagogical Engineer</h4>
             <p>OpenClassrooms</p>
           </div>
         </div>
         <div class="card">
           <img
             src="images/formationcodeur.png"
-            alt="développeur front-end"
+            alt="Front-end Developer"
             style="width: 100%"
           />
           <div class="container">
-            <h4>Développeur<br />Front-end</h4>
+            <h4>Front-end<br />Developer</h4>
             <p>OpenClassrooms</p>
           </div>
         </div>
@@ -770,7 +762,7 @@
     <div class="contact-mobile">
       <span style="cursor: pointer" onclick="openNavForm()">Contact</span>
     </div>
-    <div class="footer">© 2024 Tous droits réservés à David JULIEN</div>
+    <div class="footer">© 2024 All rights reserved to David JULIEN</div>
     <script src="/js/on-top-min.js"></script>
   </body>
 </html>

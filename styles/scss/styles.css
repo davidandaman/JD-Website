@@ -33,7 +33,6 @@
     opacity: 1;
   }
 }
-/* Appliquez l'animation à l'élément que vous souhaitez animer */
 body.loading {
   animation: fadeIn 1s ease-in-out;
 }
@@ -191,7 +190,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #394d53;
+  background-color: #637074;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -199,7 +198,7 @@ html {
 .slider:before {
   position: absolute;
   content: "";
-  background-color: #637074;
+  background-color: #aab2b5;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -220,6 +219,7 @@ input:checked + .slider:before {
 
 .slider.round {
   border-radius: 34px;
+  margin-top: -2px;
 }
 
 .slider.round:before {

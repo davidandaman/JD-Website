@@ -26,7 +26,43 @@ $headers = "From: $email" . "\r\n" .
 
 // Envoi de l'e-mail
 if (mail($to, $subject, $message, $headers)) {
-    echo "L'e-mail a été envoyé avec succès à $to";
+    // Styles CSS
+    echo '<style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                height: 100vh;
+                margin: 0;
+                background-color: #1b292e;
+                color: white;
+                font-size: 18px;
+                text-align: center;
+                font-family: Tahoma, Geneva, sans-serif;
+
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 30px;
+            }
+            a {
+                color: #ffde01;
+                text-decoration: none;
+                font-weight: bold;
+                font-family: Tahoma, Geneva, sans-serif;
+            }
+          </style>';
+
+    // Affichage de l'image
+    echo '<img src="../images/JD_logo_yellow.png" alt="Julien-David">';
+
+    // Affichage du message de confirmation
+    echo "<p>Votre message a été envoyé avec succès</p>";
+
+    // Lien de retour au site
+    echo '<a href="https://julien-david.com">Retour sur le site</a>';
 } else {
     echo "Erreur lors de l'envoi de l'e-mail.";
 }
