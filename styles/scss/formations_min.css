@@ -1,3 +1,17 @@
+.dark-mode .formation,
+.dark-mode .formation h3 {
+  background-color: #0d1416;
+}
+.formation h3,
+.formation-header {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+*,
+.container h4 {
+  font-weight: 400;
+}
 :root {
   --primary: #ffde01;
   --dark: #213740;
@@ -5,31 +19,20 @@
   --darkmedium: #2d4349;
 }
 * {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: Poppins, sans-serif;
   font-style: normal;
 }
 .formation {
-  background-color: rgb(248, 238, 178);
+  background-color: #f8eeb2;
 }
 .formation h3 {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
   color: #1b292e;
-}
-.dark-mode .formation {
-  background-color: #0d1416;
 }
 .dark-mode .formation h3 {
   color: #ffde01 !important;
-  background-color: #0d1416;
 }
 .formation-header {
-  display: flex;
   flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
   background-color: transparent;
   border-radius: 6px;
 }
@@ -48,8 +51,7 @@
   padding: 2px 16px;
 }
 .container h4 {
-  font-family: "Comfortaa", sans-serif;
-  font-weight: 400;
+  font-family: Comfortaa, sans-serif;
   color: #fefdf5;
   padding-top: 10px;
 }
@@ -79,7 +81,7 @@
   }
   p {
     font-size: 0.9em;
-    padding: 10px 0 25px 0;
+    padding: 10px 0 25px;
   }
 }
 @media (min-width: 414px) and (max-width: 767px) {
@@ -112,7 +114,7 @@
   }
   p {
     font-size: 0.9em;
-    padding: 5px 0 25px 0;
+    padding: 5px 0 25px;
   }
 }
 @media (max-width: 413px) {
@@ -140,6 +142,6 @@
   }
   p {
     font-size: 0.9em;
-    padding: 5px 0 25px 0;
+    padding: 5px 0 25px;
   }
 }

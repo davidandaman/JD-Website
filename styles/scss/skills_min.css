@@ -6,7 +6,7 @@
   --darkmedium: #2d4349;
 }
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -18,7 +18,7 @@
 }
 .skills-section h2 {
   display: inline-block;
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
   font-weight: 500;
   margin: 0;
 }
@@ -26,13 +26,9 @@
   display: flex;
   flex-direction: column;
   background-color: #fefdf5;
-  border: solid 1px #2d4349;
+  border: 1px solid #2d4349;
 }
-.skills-section .skills-row-A {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+.skills-section .skills-row-A,
 .skills-section .skills-row-B {
   display: flex;
   justify-content: space-between;
@@ -52,13 +48,18 @@
 .skills-section .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
 }
-.skills-section .flip-box-front,
-.skills-section .flip-box-back {
+.skills-section .flip-box-back,
+.skills-section .flip-box-front {
   position: absolute;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+.bar,
+.bar .thumb {
+  position: relative;
+  width: 100%;
 }
 .skills-section .flip-box-front {
   background-color: #1b292e;
@@ -86,13 +87,19 @@
   width: 100%;
   background-color: #fefdf5;
 }
+.bar,
+.bar .thumb,
+.bar abbr {
+  display: inline-block;
+}
 .skill-bar h3 {
   color: #1b292e;
   font-size: 1em;
 }
+.dark-mode .skill-bar h3 span,
 .skill-bar h3 span {
   color: #fefdf5;
-  font-family: "Poppins", sans-serif;
+  font-family: Poppins, sans-serif;
   font-weight: 500;
   font-size: 1.1em;
 }
@@ -103,12 +110,6 @@
   color: #fefdf5 !important;
   font-size: 1em;
 }
-.dark-mode .skill-bar h3 span {
-  color: #fefdf5;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 1.1em;
-}
 .wrap {
   max-width: 70%;
 }
@@ -116,28 +117,22 @@
   letter-spacing: 1px;
   font-weight: 500;
   font-size: 16px;
-  position: relative;
-  display: inline-block;
   margin-bottom: 15px;
-  width: 100%;
 }
 .bar .thumb {
-  position: relative;
-  display: inline-block;
-  width: 100%;
   height: 18px;
   background-color: #f4f1de;
-  border: solid 1px #e7e4d1;
+  border: 1px solid #e7e4d1;
   border-radius: 2px;
   margin-top: 10px;
 }
 .dark-mode .bar .thumb {
   background-color: #1e3239;
-  border: solid 1px #2d4349;
+  border: 1px solid #2d4349;
 }
 .dark-mode .bar .thumb span {
   background: #ffde01;
-  border: solid 1px #2d4349;
+  border: 1px solid #2d4349;
 }
 .bar .thumb span {
   position: absolute;
@@ -147,12 +142,15 @@
   height: 100%;
   border-radius: 2px;
   background: #ffde01;
-  border: solid 1px #e7e4d1;
+  border: 1px solid #e7e4d1;
 }
-.bar:nth-child(1) span {
+.bar:first-child span,
+.bar:nth-child(5) span,
+.bar:nth-child(8) span {
   width: 90%;
 }
-.bar:nth-child(2) span {
+.bar:nth-child(2) span,
+.bar:nth-child(7) span {
   width: 85%;
 }
 .bar:nth-child(3) span {
@@ -161,25 +159,14 @@
 .bar:nth-child(4) span {
   width: 80%;
 }
-.bar:nth-child(5) span {
-  width: 90%;
-}
 .bar:nth-child(6) span {
   width: 70%;
 }
-.bar:nth-child(7) span {
-  width: 85%;
-}
-.bar:nth-child(8) span {
-  width: 90%;
-}
 .bar abbr {
   width: 40px;
-  display: inline-block;
   height: 28px;
   border-radius: 4px;
   text-align: center;
-  line-height: 40px;
   position: absolute;
   top: 30px;
   margin-left: -5px;
@@ -187,12 +174,15 @@
   background: #1b292e;
   font-size: 0.7em;
   line-height: 2.3em;
-  border: solid 1px #637074;
+  border: 1px solid #637074;
 }
-.bar:nth-child(1) abbr {
+.bar:first-child abbr,
+.bar:nth-child(5) abbr,
+.bar:nth-child(8) abbr {
   left: 90%;
 }
-.bar:nth-child(2) abbr {
+.bar:nth-child(2) abbr,
+.bar:nth-child(7) abbr {
   left: 85%;
 }
 .bar:nth-child(3) abbr {
@@ -201,17 +191,8 @@
 .bar:nth-child(4) abbr {
   left: 80%;
 }
-.bar:nth-child(5) abbr {
-  left: 90%;
-}
 .bar:nth-child(6) abbr {
   left: 70%;
-}
-.bar:nth-child(7) abbr {
-  left: 85%;
-}
-.bar:nth-child(8) abbr {
-  left: 90%;
 }
 @media (min-width: 1240px) {
   .skills-section {
@@ -238,7 +219,7 @@
   }
   .flip-content h3 {
     color: #fefdf5;
-    font-family: "Montserrat", sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 1em;
     margin-top: 10px;
@@ -282,7 +263,7 @@
   }
   .flip-content h3 {
     color: #fefdf5;
-    font-family: "Montserrat", sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 1em;
     margin-top: 10px;
@@ -326,7 +307,7 @@
   }
   .flip-content h3 {
     color: #fefdf5;
-    font-family: "Montserrat", sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 0.8em;
     margin-top: 10px;
@@ -354,19 +335,16 @@
   .skills-section .skills-tab {
     width: 90%;
     height: 640px;
-    padding: 10px;
-    padding-top: 20px;
+    padding: 20px 10px 10px;
+  }
+  .skills-section .skills-row-A,
+  .skills-section .skills-row-B {
+    width: 98%;
+    padding-left: 2%;
+    display: block;
   }
   .skills-section .skills-row-A {
-    display: block;
     justify-content: space-between;
-    width: 98%;
-    padding-left: 2%;
-  }
-  .skills-section .skills-row-B {
-    display: block;
-    width: 98%;
-    padding-left: 2%;
   }
   .flip-box {
     display: block;
@@ -383,7 +361,7 @@
   }
   .flip-content h3 {
     color: #fefdf5;
-    font-family: "Montserrat", sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 0.8em;
     margin-top: 10px;
@@ -394,10 +372,6 @@
     padding: 10px;
     font-size: 0.8em;
     margin-top: -20px;
-  }
-  .skill-bar {
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
   .skill-bar {
     padding-top: 30px;
@@ -417,19 +391,16 @@
   .skills-section .skills-tab {
     width: 90%;
     height: 550px;
-    padding: 10px;
-    padding-top: 20px;
+    padding: 20px 10px 10px;
+  }
+  .skills-section .skills-row-A,
+  .skills-section .skills-row-B {
+    width: 98%;
+    padding-left: 2%;
+    display: block;
   }
   .skills-section .skills-row-A {
-    display: block;
     justify-content: space-between;
-    width: 98%;
-    padding-left: 2%;
-  }
-  .skills-section .skills-row-B {
-    display: block;
-    width: 98%;
-    padding-left: 2%;
   }
   .flip-box {
     display: block;
@@ -446,7 +417,7 @@
   }
   .flip-content h3 {
     color: #fefdf5;
-    font-family: "Montserrat", sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 0.6em;
     margin-top: 10px;
@@ -457,10 +428,6 @@
     padding: 10px;
     font-size: 0.6em;
     margin-top: -20px;
-  }
-  .skill-bar {
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
   .skill-bar {
     padding-top: 30px;
@@ -482,16 +449,14 @@
     height: 444px;
     padding: 10px;
   }
-  .skills-section .skills-row-A {
-    display: block;
-    justify-content: space-between;
-    width: 99%;
-    padding-left: 3px;
-  }
+  .skills-section .skills-row-A,
   .skills-section .skills-row-B {
-    display: block;
     width: 99%;
     padding-left: 3px;
+    display: block;
+  }
+  .skills-section .skills-row-A {
+    justify-content: space-between;
   }
   .flip-box {
     display: block;
@@ -508,7 +473,7 @@
   }
   .flip-content h3 {
     color: #fefdf5;
-    font-family: "Montserrat", sans-serif;
+    font-family: Montserrat, sans-serif;
     font-weight: 500;
     font-size: 0.6em;
     margin-top: 10px;
@@ -519,10 +484,6 @@
     padding: 10px;
     font-size: 0.5em;
     margin-top: -20px;
-  }
-  .skill-bar {
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
   .skill-bar {
     padding-top: 30px;

@@ -1,3 +1,22 @@
+.portfolio h2,
+.portfolio-header,
+.row {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.column,
+.row {
+  padding: 0 4px;
+}
+*,
+.btn {
+  font-weight: 400;
+}
+#modalCaption,
+.btn-container {
+  text-align: center;
+}
 :root {
   --primary: #ffde01;
   --dark: #213740;
@@ -5,39 +24,27 @@
   --darkmedium: #2d4349;
 }
 * {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: Poppins, sans-serif;
   font-style: normal;
 }
 .portfolio {
   background-color: #ffde01;
 }
 .portfolio h2 {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
   color: #1b292e;
 }
 .portfolio-header {
-  display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #fbe864;
-  border: solid 1px #fefdf5;
+  border: 1px solid #fefdf5;
   border-radius: 6px;
 }
 .row {
-  display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .column {
   flex: 25%;
   max-width: 25%;
-  padding: 0 4px;
 }
 .column img {
   margin-top: 8px;
@@ -57,25 +64,18 @@
     max-width: 100%;
   }
 }
-.btn-container {
-  text-align: center;
-}
 .btn {
   border: none;
-  outline: none;
+  outline: 0;
   background-color: #eecf00;
   color: #1b292e;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: Montserrat, sans-serif;
   font-size: 1.2em;
   border-radius: 6px;
   cursor: pointer;
 }
+.btn.active,
 .btn:hover {
-  background-color: #1b292e;
-  color: #fefdf5;
-}
-.btn.active {
   background-color: #1b292e;
   color: #fefdf5;
 }
@@ -89,27 +89,25 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.9);
 }
+#modalCaption,
 .modal-content {
   margin: auto;
   display: block;
   width: 80%;
+}
+.modal-content {
   max-width: 1000px;
 }
 #modalCaption {
-  margin: auto;
-  display: block;
-  width: 80%;
   max-width: 700px;
-  text-align: center;
   color: #fefdf5;
   padding: 10px 0;
   height: 150px;
 }
-.modal-content,
-#modalCaption {
+#modalCaption,
+.modal-content {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
@@ -131,8 +129,8 @@
   transition: 0.3s;
   z-index: 2;
 }
-.close:hover,
-.close:focus {
+.close:focus,
+.close:hover {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
@@ -150,7 +148,7 @@
 }
 .dark-mode .portfolio-header {
   background-color: #1b292e;
-  border: solid 1px #2d4349;
+  border: 1px solid #2d4349;
 }
 .dark-mode .btn {
   background-color: #0d1416;
@@ -160,17 +158,16 @@
   background-color: teal;
   color: #fefdf5;
 }
-.btn.active {
-  background-color: #1b292e;
-  color: #fefdf5;
-}
 .dark-mode .btn.active {
   background-color: #ffde01;
   color: #1b292e;
 }
 @media (min-width: 1240px) {
-  .portfolio h2 {
+  .portfolio h2,
+  .row {
     max-width: 1140px;
+  }
+  .portfolio h2 {
     padding-top: 50px;
     padding-bottom: 10px;
     font-size: 1.7em;
@@ -179,9 +176,6 @@
     max-width: 1140px;
     margin-bottom: 50px;
     padding: 20px;
-  }
-  .row {
-    max-width: 1140px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1239px) {
@@ -234,13 +228,16 @@
   .btn {
     min-width: 100px;
     padding: 16px 18px;
-    margin: 6px 6px;
+    margin: 6px;
     font-size: 1.2em;
   }
 }
 @media (max-width: 767px) {
-  .portfolio h2 {
+  .portfolio h2,
+  .row {
     max-width: 90%;
+  }
+  .portfolio h2 {
     padding-top: 50px;
     padding-bottom: 10px;
     font-size: 1.5em;
@@ -250,8 +247,5 @@
     max-width: 90%;
     margin-bottom: 50px;
     padding: 20px;
-  }
-  .row {
-    max-width: 90%;
   }
 }

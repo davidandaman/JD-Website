@@ -1,31 +1,41 @@
 function darkLight() {
   const e = document.querySelector(".switch input");
-  e.checked ? enableDarkMode() : disableDarkMode(),
+  e.checked
+    ? (enableDarkMode(),
+      document.querySelectorAll(".nav-mobile").forEach(function (e) {
+        e.style.color = "pink";
+      }))
+    : (disableDarkMode(),
+      document.querySelectorAll(".nav-mobile").forEach(function (e) {
+        e.style.color = "green";
+      })),
     localStorage.setItem("darkModeEnabled", e.checked);
 }
 function enableDarkMode() {
   const e = document.body,
     o = document.querySelector(".header"),
     r = document.querySelector(".txt-logo"),
-    l = document.getElementById("triangle-langue"),
+    l = document.querySelector(".logo img"),
+    c = document.getElementById("triangle-langue"),
     t = document.querySelectorAll(".langue a"),
-    c = document.querySelectorAll(".skills-section img"),
-    a = document.querySelectorAll(".skill-bar");
+    a = document.querySelectorAll(".skills-section img"),
+    d = document.querySelectorAll(".skill-bar");
   e.classList.add("dark-mode"),
     o.classList.add("dark-mode-header"),
     r.classList.add("dark-mode-text"),
-    l.classList.add("dark-mode-triangle"),
+    (l.src = "../../images/JD_logo_yellow_bk.png"),
+    c.classList.add("dark-mode-triangle"),
     t.forEach((e) => {
       e.classList.add("dark-mode-langue");
     }),
-    a.forEach((e) => {
+    d.forEach((e) => {
       e.classList.add("dark-mode-skill-bar");
     }),
     (document.querySelector(".skills-section").style.backgroundColor =
       "var(--dark)");
-  const d = document.querySelector(".skills-tab");
-  (d.style.backgroundColor = "var(--secondary)"),
-    (d.style.border = "1px solid var(--darkmedium)"),
+  const n = document.querySelector(".skills-tab");
+  (n.style.backgroundColor = "var(--secondary)"),
+    (n.style.border = "1px solid var(--darkmedium)"),
     document.querySelectorAll(".flip-box-front").forEach((e) => {
       e.style.backgroundColor = "var(--primary)";
     }),
@@ -35,7 +45,7 @@ function enableDarkMode() {
     document.querySelectorAll("h3").forEach((e) => {
       e.style.color = "var(--secondary)";
     }),
-    c.forEach((e) => {
+    a.forEach((e) => {
       e.src.includes("_bk.png") || (e.src = e.src.replace(".png", "_bk.png"));
     });
 }
@@ -43,24 +53,26 @@ function disableDarkMode() {
   const e = document.body,
     o = document.querySelector(".header"),
     r = document.querySelector(".txt-logo"),
-    l = document.getElementById("triangle-langue"),
+    l = document.querySelector(".logo img"),
+    c = document.getElementById("triangle-langue"),
     t = document.querySelectorAll(".langue a"),
-    c = document.querySelectorAll(".skills-section img"),
-    a = document.querySelectorAll(".skill-bar");
+    a = document.querySelectorAll(".skills-section img"),
+    d = document.querySelectorAll(".skill-bar");
   e.classList.remove("dark-mode"),
     o.classList.remove("dark-mode-header"),
     r.classList.remove("dark-mode-text"),
-    l.classList.remove("dark-mode-triangle"),
+    (l.src = "./images/JD_logo_black.png"),
+    c.classList.remove("dark-mode-triangle"),
     t.forEach((e) => {
       e.classList.remove("dark-mode-langue");
     }),
-    a.forEach((e) => {
+    d.forEach((e) => {
       e.classList.remove("dark-mode-skill-bar");
     }),
     (document.querySelector(".skills-section").style.backgroundColor = "");
-  const d = document.querySelector(".skills-tab");
-  (d.style.backgroundColor = ""),
-    (d.style.border = ""),
+  const n = document.querySelector(".skills-tab");
+  (n.style.backgroundColor = ""),
+    (n.style.border = ""),
     document.querySelectorAll(".flip-box-front").forEach((e) => {
       e.style.backgroundColor = "";
     }),
@@ -70,7 +82,7 @@ function disableDarkMode() {
     document.querySelectorAll("h3").forEach((e) => {
       e.style.color = "";
     }),
-    c.forEach((e) => {
+    a.forEach((e) => {
       e.src.includes("_bk.png") && (e.src = e.src.replace("_bk.png", ".png"));
     });
 }
