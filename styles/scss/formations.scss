@@ -131,9 +131,12 @@
 
 @media (max-width: 413px) {
   .formation h3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
     padding-top: 50px;
-    padding-left: 10px;
-    font-size: 1.7em;
+    font-size: 1.5em;
   }
 
   .formation-header {
@@ -145,6 +148,7 @@
   .card {
     width: 100%;
     margin: 1% 0;
+    margin-bottom: 10px;
 
     img {
       max-width: 40%;
