@@ -216,7 +216,6 @@ input:checked + .slider:before {
 
 .slider.round {
   border-radius: 34px;
-  margin-top: -2px;
 }
 
 .slider.round:before {
@@ -890,6 +889,7 @@ input:checked + .slider:before {
     color: $primary;
     border: none;
     z-index: 1000;
+    margin-top: 4px;
   }
 
   .openbtn:hover {
